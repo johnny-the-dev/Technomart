@@ -60,34 +60,35 @@
         <div class="promo">
           <div class="promo-container promo1">
 <!-- promo1, promo2 и т.д для разного бэкграунда          -->
-            <h2>Материалы</h2>
-            <span>на любой вкус</span>
-            <img src="#" class="new-item">   
+            <div class="new-item">новинка</div>
+            <h1>Материалы</h1>
+            <a class="promo--btn" href="#">на любой вкус</a>
+               
           </div>
           <div class="promo-container promo2">
-            <h2>Инструмент</h2>
-            <span>на все случаи</span>
+            <h1>Инструмент</h1>
+            <a class="promo--btn" href="#">на все случаи</a>
           </div>
           <div class="promo-container promo3">
-            <h2>Техника</h2>
-            <span>для стройки</span>
+            <h1>Техника</h1>
+            <a class="promo--btn" href="#">для стройки</a>
           </div>
           <div class="big-promo">
             <div class="big-promo_header">
-              <h3>дрели</h3>
-              <span>Соседям на радость</span>
+              <h2>дрели</h2>
+              <div class="big-promo--info">Соседям на радость</div>
             </div>
             <a class="btn" href="#">открыть каталог</a>
             <a class="prev" href="#"></a>
             <a class="next" href="#"></a>  
           </div>
           <div class="promo-container promo4">
-            <h2>Скидки 50%</h2>
-            <span>на 350 товаров</span>
+            <h1>Скидки 50%</h1>
+            <a class="promo--btn" href="#">на 350 товаров</a>
           </div>
           <div class="promo-container promo5">
-            <h2>Доставка</h2>
-            <span>бесплатно</span>
+            <h1>Доставка</h1>
+            <a class="promo--btn" href="#">бесплатно</a>
           </div>
         </div>
         <div class="catalog">
@@ -95,30 +96,46 @@
             <span>популярные товары:</span>
             <a class="btn" href="#">все популярные товары</a>
           </header>
-          <article class="items">
-            <img src="#" width="230px" height="150px" alt="перфоратор bosch bfg 9000">
-            <h4>перфоратор bosch bfg 9000</h4>
-            <span>32500 Р.</span>
-            <a class="item-price">25500 Р.</a>
+          <article class="item">
+            <div class="item-actions">
+              <a class="item--btn buy">купить</a>
+              <a class="item--btn bookmark">в закладки</a>
+            </div>
+            <div class="image"><img src="#" width="230px" height="150px" alt="перфоратор bosch bfg 9000"></div>
+            <h3 class="item-name">перфоратор bosch bfg 9000</h3>
+            <div class="count-price">32500 Р.</div>
+            <div class="item-price">25500 Р.</div>
           </article>
-          <article class="items">
-            <img src="#" width="230px" height="150px" alt="перфоратор bosch bfg 3000">
-            <h4>перфоратор bosch bfg 3000</h4>
-            <span>22500 Р.</span>
-            <a class="item-price">15500 Р.</a>
+          <article class="item">
+            <div class="item-actions">
+              <a class="item--btn buy">купить</a>
+              <a class="item--btn bookmark">в закладки</a>
+            </div>
+            <div class="image"><img src="#" width="230px" height="150px" alt="перфоратор bosch bfg 3000"></div>
+            <h3 class="item-name">перфоратор bosch bfg 3000</h3>
+            <div class="count-price">22500 Р.</div>
+            <div class="item-price">15500 Р.</div>
           </article>
-          <article class="items">
-            <img src="#" width="230px" height="150px" alt="перфоратор bosch bfg 6000">
-            <h4>перфоратор bosch bfg 6000</h4>
-            <span>30500 Р.</span>
-            <a class="item-price">25500 Р.</a>
+          <article class="item">
+            <div class="item-actions">
+              <a class="item--btn buy">купить</a>
+              <a class="item--btn bookmark">в закладки</a>
+            </div>
+            <div class="image"><img src="#" width="230px" height="150px" alt="перфоратор bosch bfg 6000"></div>
+            <h3 class="item-name">перфоратор bosch bfg 6000</h3>
+            <div class="count-price">30500 Р.</div>
+            <div class="item-price">25500 Р.</div>
           </article>
-          <article class="items">
-            <img src="#" width="230px" height="150px" alt="перфоратор bosch bfg 2000">
-            <h4>перфоратор bosch bfg 2000</h4>
-            <a class="item-price">12500 Р.</a>
-            <img src="#" class="new-item">
-          </article>          
+          <article class="item">
+            <div class="new-item">новинка</div>
+            <div class="item-actions">
+              <a class="item--btn buy">купить</a>
+              <a class="item--btn bookmark">в закладки</a>
+            </div>
+            <div class="image"><img src="#" width="230px" height="150px" alt="перфоратор bosch bfg 2000"></div>
+            <h3 class="item-name">перфоратор bosch bfg 2000</h3>            
+            <div class="item-price">12500 Р.</div>
+          </article>                               
           <header class="add-header">
             <span>популярные производители:</span>
             <a class="btn" href="#">все производители</a>
@@ -137,21 +154,34 @@
       </div>
       <div class="add-info">
         <div class="services">
-          <h5>сервисы</h5>
+          <h4>сервисы</h4>
           <p>Хороший интернет-магазин отличается от плохого не только ценами! 
              Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         </div>
-        <ul>
-          <li><span class="active">Доставка</span></li>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Кредит</a></li>
-        </ul>
-        <div class="delivery">
-          <span>доставка</span>
-          <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
-             Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
-        </div>
-<!--          изображение грузовика     -->
+        <dl class="tabs" id="tabs">
+          <dt>Доставка</dt>
+          <dd>
+            <div class="tab-info">
+              <h4 class="tab-header">доставка</h4>
+              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
+                 Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
+            </div>
+          </dd>
+          <dt>Гарантия</dt>
+          <dd>
+            <div class="tab-info">
+              <h4 class="tab-header">гарантия</h4>
+              <p>"описание гарантии"</p>
+            </div>
+          </dd>
+          <dt>Кредит</dt>
+          <dd>
+            <div class="tab-info">
+              <h4 class="tab-header">кредит</h4>
+              <p>"описание кредита"</p>
+            </div>
+          </dd>        
+        </dl>    
       </div>
       <div class="contact-block">
         <div class="company-description">
