@@ -1,0 +1,65 @@
+body {
+  font-family: Cuprum, Arial, sans-serif;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+/* index.html */
+
+.promo h2 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.promo h3 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;  
+}
+
+h1.item-name {
+  font-family: PTSans, Arial, sans-serif;
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;  
+  text-align: center;
+}
+
+h4.tab-header {  
+  color: #32425c;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.contact-block h4{
+  color: #000;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+
+
+/*catalog.html*/
+
+
+
+h1.page-name {
+  color: #32425c;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.search-column h2 {
+  font-family: PTSans, Arial, sans-serif;
+  color: #000;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.add-info h4 {  
+  color: #000;
+  font-size: 30px;
+  font-weight: 400;
+}
