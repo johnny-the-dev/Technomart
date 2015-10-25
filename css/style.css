@@ -5,7 +5,139 @@ body {
   font-weight: 400;
 }
 
+div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: green solid 1px}
+
 /* index.html */
+
+.clearfix:after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.main-header {
+  background: #f1f5f7;
+  padding-bottom: 60px;
+}
+
+.top-panel {
+  background: #293449;
+  height: 42px;
+  margin-bottom: 45px;
+}
+.logo {
+  float: left;
+  width: 220px;
+  
+  background: #ee3643;
+  font-size: 24px;
+  line-height: 42px;
+  text-align: center;  
+}
+
+.header_user-panel {
+  float: right;
+  
+  text-align: left;
+  margin-top: 0;
+}
+
+.header_user-panel li {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  margin-left: -4px;
+  width: 150px;
+}
+
+.header_user-panel a {
+  line-height: 42px;    
+}
+
+.header_user-panel .form-search {
+  width: 230px;  
+}
+
+.header_user-panel input {
+  width: 170px;  
+}
+
+.header_description {
+  float: left;
+  margin-left: 50px;
+  margin-right: 20px;
+  width: 250px;
+  min-height: 68px;
+  
+  color: #ee3643;
+  text-align: left;
+}
+
+.header_contacts {
+  float: left;
+  width: 270px;
+    
+  color: #ee3643;
+  text-align: center;
+}
+
+.header_contacts .address {
+  color: #32425c;
+}
+
+.header_contacts .phone {
+  width: 264px;  
+  line-height: 38px;
+  
+  border: 3px solid #fff;
+}
+
+.header_user-block {
+  float: right;
+  width: 295px;
+  
+  color: #000;
+}
+
+.header_user-block .registration {
+  display: inline-block;  
+  margin-left: 20px;
+  width: 150px;
+  
+  line-height: 45px;  
+  text-align: center;
+  
+  background: #fff;
+}
+
+.header_user-block .enter {
+  display: inline-block;
+  width: 120px;
+  
+  line-height: 45px;
+  text-align: center;
+  
+  background: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .promo h2 {
   color: #fff;
