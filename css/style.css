@@ -3,11 +3,17 @@ body {
   color: #fff;
   font-size: 17px;
   font-weight: 400;
+  background: #fff;
+  
 }
+
+/* выделение границ 
 
 div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: green solid 1px}
 
-/* index.html */
+*/
+
+
 
 .clearfix:after {
   content: '';
@@ -20,9 +26,33 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   margin: 0 auto;
 }
 
+.btn {
+  display: inline-block;
+  height: 38px;
+  line-height: 38px;
+  vertical-align: middle;
+  
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  
+  background: #ee3643;
+  border-radius: 3px; 
+}
+
+.new-item {  
+  height: 60px;
+  width: 60px;
+  text-indent: -999px;
+  overflow: hidden;
+  background: url('../img/new-item.png') no-repeat 0 0;
+}
+
 .main-header {
   background: #f1f5f7;
-  padding-bottom: 60px;
+  padding-bottom: 65px;
 }
 
 .top-panel {
@@ -35,9 +65,12 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   width: 220px;
   
   background: #ee3643;
+  color: #fff;
   font-size: 24px;
   line-height: 42px;
-  text-align: center;  
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 .header_user-panel {
@@ -48,23 +81,25 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 }
 
 .header_user-panel li {
-  display: inline-block;
+  display: inline-block;  
   vertical-align: middle;
-  text-align: center;
-  margin-left: -4px;
   width: 150px;
+  text-align: center;
+  margin-left: -4px;  
 }
 
-.header_user-panel a {
-  line-height: 42px;    
+.header_user-panel a {  
+  line-height: 42px;  
+  color: #fff;
+  text-decoration: none;
 }
 
 .header_user-panel .form-search {
-  width: 230px;  
+  width: 230px;
 }
 
 .header_user-panel input {
-  width: 170px;  
+  width: 170px;
 }
 
 .header_description {
@@ -88,10 +123,13 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 
 .header_contacts .address {
   color: #32425c;
+  font-size: 14px;
 }
 
 .header_contacts .phone {
   width: 264px;  
+  
+  font-size: 21px;
   line-height: 38px;
   
   border: 3px solid #fff;
@@ -100,15 +138,17 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 .header_user-block {
   float: right;
   width: 295px;
-  
-  color: #000;
+  min-height: 45px;
 }
 
 .header_user-block .registration {
   display: inline-block;  
   margin-left: 20px;
   width: 150px;
+  vertical-align: top;
   
+  color: #000;
+  text-decoration: none;
   line-height: 45px;  
   text-align: center;
   
@@ -118,26 +158,214 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 .header_user-block .enter {
   display: inline-block;
   width: 120px;
+  vertical-align: top;
   
+  color: #000;
+  text-decoration: none;
   line-height: 45px;
   text-align: center;
   
   background: #fff;
 }
 
+.header_main-nav {
+  width: auto;
+  height: 55px; 
+   
+  background: #32425c;
+}
+
+.header_main-nav li {
+  display: inline-block;   
+  vertical-align: top;
+}
+
+.header_main-nav span,
+.header_main-nav a {
+  padding-right: 20px;
+  padding-left: 20px;
+  
+  color: #fff;
+  text-decoration: none;
+  line-height: 55px;
+  text-align: center; 
+}
+
+.header_main-nav span {
+  margin-left: -10px;
+}
 
 
+/* index.html */
 
 
+.main-index {
+  padding-top: 60px;
+}
 
+.promo-catalog {
+  padding-bottom: 85px;
+}
 
+.promo {
+  margin-bottom: 53px;
+}
 
+.promo a {
+  display: block;
+  height: 37px;
+  width: 135px;
+  margin-top: -7px;
+  border-radius: 5px;
+  
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  line-height: 37px;
+  text-align: center;  
+  
+  background: rgba(0,0,0,0.1);  
+}
 
+.promo-container {
+  float: left;
+  vertical-align: top;
+  height: 120px;
+  width: 275px;  
+  margin-bottom: 20px; 
+  padding-left: 25px;
+}
 
+.big-promo {
+  float:left;
+  position: relative;  
+  width: 620px;
+  height: 260px;
+  margin-right: 20px;  
+}
 
+.slider-inner {
+  overflow: hidden;
+}
 
+.slider-slides {
+  width: 200%;
+}
 
+.slider-slides img {
+  float: left;
+  width: 620px;
+  height: 260px;
+}
 
+.big-promo input[type="radio"] {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 48.5%;
+  bottom: 12%;
+  z-index: 20; 
+}
+
+.big-promo input[type="radio"]:first-of-type {
+  left: 51.5%;
+}
+
+.arrowy-controls .next {
+  position: absolute;
+  top: 115px;
+  right: 20px;
+  display: block;
+  width: 25px;
+  height: 25px;
+  z-index: 20;
+  
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  
+  cursor: pointer;
+}
+
+.arrowy-controls .prev {
+  position: absolute;
+  top: 115px;
+  left: 20px;
+  display: block;
+  width: 25px;
+  height: 25px;
+  z-index: 20;
+  
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  
+  cursor: pointer;
+}
+
+#btn-1:checked ~ .slider-inner .slider-slides {
+  transform: translate(0);
+  -webkit-transform: translate(0);
+  -moz-transform: translate(0);
+  -o-transform: translate(0);
+  -ms-transform: translate(0);
+}
+
+#btn-2:checked ~ .slider-inner .slider-slides {
+  transform: translate(-620px);
+  -webkit-transform: translate(-620px);
+  -moz-transform: translate(-620px);
+  -o-transform: translate(-620px);
+  -ms-transform: translate(-620px);
+}
+
+.big-promo a {
+  position: absolute;
+  top: 206px;
+  left: 24px;
+  width: 195px;
+  text-align: center;
+  
+  background: #ee3643;
+  font-size: 14px;    
+}
+
+.promo1 {
+  margin-right: 20px;
+  background: #f6b22d url('../img/promo-materials.png') 85% 50% no-repeat;
+}
+
+.promo2 {  
+  background: #4aafde url('../img/promo-instruments.png') 85% 50% no-repeat;
+}
+
+.promo3 {
+  float: right;
+  margin-left: 20px;
+  background: #cc79d1 url('../img/promo-equipment.png') 85% 50% no-repeat;
+}
+
+.promo4 {
+  float: right;
+  background: #85d179 url('../img/promo-discounts.png') 85% 50% no-repeat;
+}
+
+.promo5 {
+  float: right;
+  background: #f6b22d url('../img/promo-delivery.png') 85% 50% no-repeat;
+}
+
+.promo .new-item {
+  float: right;    
+}
 
 .promo h2 {
   color: #fff;
@@ -151,15 +379,248 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   font-weight: 700;  
 }
 
-h1.item-name {
+.add-header {
+  width: auto;
+  height: 88px;
+  line-height: 88px;
+  margin-bottom: 20px;
+  
+  background: #ee3643;
+  padding-left: 29px;
+  background: #f7f3ec;
+}
+
+.add-header span {
+  color: #677182;
+  text-transform: uppercase;
+  font-size: 30px;  
+}
+
+.add-header .btn {
+  float: right;
+  width: 253px;
+  text-align: center;
+  margin-right: 20px;
+  margin-top: 24px;
+}
+
+.item {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 218px;
+  height: 316px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+    
+  text-align: center;
+  border: 1px solid #e5e5e5;
+}
+
+.item:last-of-type {  
+  margin-right: 0;
+}
+
+.item .image {
+  height: 165px;
+  line-height: 165px;
+  width: auto;
+  text-align: center;
+}
+
+.item img {
+  vertical-align: middle;  
+}
+
+.item-name {
+  width: 180px;
+  min-height: 38px;
+  margin: 0 auto;  
+  
   font-family: PTSans, Arial, sans-serif;
   color: #000;
   font-size: 18px;
   font-weight: 700;  
-  text-align: center;
+  text-align: center;  
 }
 
-h4.tab-header {  
+.item-name .uppercase {  
+  text-transform: uppercase;  
+}
+
+.item .count-price {
+  margin: 0 auto;
+  padding: 10px 0;
+  
+  font-family: PTSans, Arial, sans-serif;
+  color: #999;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: line-through;  
+}
+
+.item .no-discount {
+  text-indent: -9999px;  
+}
+
+.item .new-item {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 20;  
+}
+
+.item-actions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 218px;
+  height: 165px;  
+  
+  background: #fff;
+}
+
+.item--btn {
+  display: block;
+  width: 135px;  
+  line-height: 21px;
+  padding: 8px 0;
+  margin: 0 auto;  
+  margin-bottom: 7px;
+  
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  
+  background: #63a63e;
+  border: 3px solid #63a63e;
+  border-bottom-color: #367315;
+  border-radius: 3px;
+}
+
+.item-actions .buy {  
+  margin-top: 44px;
+}
+
+.item-actions .bookmark {
+  color: #32425c;
+  background: #fff;  
+  border-bottom-color: #63a63e;    
+}
+
+.item:not(:hover) .item-actions {
+  display: none;
+}
+
+.item:hover .item-actions {
+  position: absolute;
+  display: block;
+  z-index: 10;
+}
+
+.item:hover {
+  -moz-box-shadow: 0 0 25px 5px #ddd;
+  -webkit-box-shadow: 0 0 25px 5px #ddd; 
+  box-shadow: 0 0 25px 5px #ddd;
+}
+
+.item-actions .buy:link,
+.item-actions .buy:visited {
+  background: #63a63e;
+}
+
+.item-actions .buy:hover {
+  background: #5fbb2d;
+  border-color: #5fbb2d;
+  border-bottom-color: #367315;
+}
+
+.item-actions .buy:active {
+  background: #518534;
+  border-color: #518534;
+}
+
+.item-price {
+  position: relative;
+  margin: 0 auto;
+  width: 102px;
+  padding: 10px 30px;
+  
+  font-family: PTSans, Arial, sans-serif;
+  color: #fff;
+  font-weight: 700;
+  
+  background: #ee3643;
+  border-radius: 3px;
+}
+
+.item-price:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: -20px;
+  height: 0;
+  width: 0;
+  border: 20px solid #fff;
+  border-left-color: #ee3643;
+}
+
+.manufacturers a {
+  display: inline-block;
+  height: 142px;
+  line-height: 142px;
+  width: 218px;
+  
+  margin-right: 15px;
+  margin-bottom: 20px;  
+  
+  text-align: center;
+  vertical-align: top;
+  
+  border: 1px solid #e5e5e5;
+}
+
+.manufacturers a:nth-of-type(4n) {
+  margin-right: 0;
+}
+
+.manufacturers img {
+  vertical-align: middle;
+}
+
+.add-info {
+  padding-top: 25px;
+  padding-bottom: 101px;
+  background: #f2f6f8;
+}
+
+.services {
+  width: 430px;
+  min-height: 110px;
+  margin-bottom: 61px;
+  text-align: left;
+  color: #000;
+}
+
+.services h4 {
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: left;  
+  margin-bottom: 26px;
+}
+
+.services p {
+  font-family: PTSans, Arial, sans-serif; 
+  font-size: 13px;
+  line-height: 1.85em;  
+}
+
+
+
+
+.tab-header {  
   color: #32425c;
   font-size: 36px;
   font-weight: 400;
