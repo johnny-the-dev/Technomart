@@ -18,6 +18,8 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 для "популяных производителей" и "популярных товаров" увеличил ширину на 30px больше центровщика и сделал text-align:left, вроде перестали выпадать, но можно ли так делать?=/ (при уменьшении экрана инлайн блоки теперь выходят немного за границу центровщика)
 */
 
+/*  общие элементы  */
+
 .clearfix:after {
   content: '';
   clear: both;
@@ -52,6 +54,8 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   overflow: hidden;
   background: url('../img/new-item.png') no-repeat 0 0;
 }
+
+/*  header */
 
 .main-header {
   background: #f1f5f7;
@@ -212,7 +216,42 @@ background: #63a63e;
   text-decoration: none;   
 }
 
+/* user-block и активная корзина для catalog.html */
 
+.header_user-panel .active {
+  background: #ee3643;
+}
+
+.header_user-block .user-name {
+  background: #fff;
+  width: 300px;
+  line-height: 44px;
+  text-align: center;  
+}
+
+.header_user-block .user-profile {
+  font-size: 21px;
+  color: #000;
+  text-decoration: none;
+}
+
+.header_user-block .user-refs {
+  text-align: left;
+  padding: 5px 16px;
+}
+
+.user-refs a {
+  font-size: 16px;
+  color: #32425c;  
+}
+
+.user-refs span {
+  color: #32425c;
+  margin: 0 5px;
+}
+
+
+/* footer */
 
 .main-footer {
   background: #32425c;
@@ -944,23 +983,235 @@ background: #63a63e;
 
 /*catalog.html*/
 
+.catalog-main {
+  font-family: PTSans, Arial, sans-serif;
+  color: #000;
+  text-transform: uppercase;
+}
 
+.breadcrumbs {
+  padding: 21px 0;
+  margin: 0;
+}
 
-h1.page-name {
+.breadcrumbs li {
+  position: relative;
+  display: inline-block;  
+}
+
+.breadcrumbs span,
+.breadcrumbs a {  
+  color: #000;
+  font-size: 13px;
+  text-decoration: none;  
+}
+
+.breadcrumbs .marker {
+  display: inline-block;
+  vertical-align: top;
+  height: 6px;
+  width: 6px;
+  margin: 0 10px;
+  margin-top: 6px;
+  
+  border-top: 1px solid #cdd1d8;
+  border-right: 1px solid #cdd1d8;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+}
+
+.page-name {
+  margin: 0;
+  padding: 32px 28px;
+  margin-bottom: 20px;
+  
   color: #32425c;
   font-size: 30px;
-  font-weight: 400;
+  font-weight: 400;  
+  
+  background: #f2f6f8;
+}
+
+.search-column {
+  float: left;
+  width: 220px;
+  padding: 0;
+  margin: 0;
+}
+
+.common-headers {
+  display: block;
+  width: auto;
+  margin-bottom: 17px;
+  padding-left: 16px;
+  line-height: 37px;
+  
+  font-size: 13px;  
+  text-align: left;
+  background: #f7f3ec;
+  border-radius: 3px;
 }
 
 .search-column h2 {
+  margin: 0;
+  margin-bottom: 20px;
+  
   font-family: PTSans, Arial, sans-serif;
   color: #000;
   font-size: 17px;
   font-weight: 700;
 }
 
-.add-info h4 {  
+.search-column label {
+  display: block;
+  margin: 19px 0;
+  margin-left: 32px;
+}
+
+.search-column input {
+  display: none;
+}
+
+.search-column .manufacturer-range {
+  padding-top: 19px;
+  margin-bottom: 19px;
+  border-top: 1px solid #e5e5e5; 
+  border-bottom: 1px solid #e5e5e5;  
+}
+
+.search-column .supply {
+  margin-bottom: 79px;
+}
+
+.search-column button {
+  width: 138px;
+  height: 36px;
+  
+  font-size: 13px;
+  text-transform: uppercase;
+  
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+}
+
+.catalog-column {
+  float: right;
+  width: 700px;
+}
+
+.sorting-panel ul {
+  float: right;
+  margin: 0;  
+  text-align: right;
+}
+
+.sorting-panel li {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 20px; 
+}
+
+.sorting-panel a {
+  color: #b2b2b2;
+  text-decoration: none;
+  border-bottom: 1px dotted #ee3643;  
+}
+
+.sorting-panel a:hover {
   color: #000;
+  border-bottom: 1px solid #ee3643;
+}
+
+.sorting-panel .active {
+  color: #ee3643;
+  border-bottom: none;
+}
+
+.sorting-panel .marker-up {
+  height: 0;
+  width: 0;
+  
+  border: 10px solid transparent;
+  border-width: 12px 6px;
+  border-bottom-color: #c6c2bd;
+}
+
+.sorting-panel .marker-up:hover {
+  border-bottom-color: #000;
+}
+
+.sorting-panel .marker-down {
+  margin-top: 12px;  
+  height: 0;
+  width: 0;
+  
+  border: 10px solid transparent;
+  border-width: 12px 6px;
+  border-top-color: #c6c2bd;  
+}
+
+.sorting-panel .marker-down:hover {
+  border-top-color: #000;
+}
+
+.catalog-column .catalog-items {
+  width: 725px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 32px;
+}
+
+.catalog-column .item:nth-of-type(3n+3) {
+  margin-right: 0;
+}
+
+.pagination {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 60px;
+}
+
+.pagination span,
+.pagination a {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 15px;
+  
+  line-height: 36px;
+  color: #000;
+  font-size: 13px;
+  text-decoration: none;  
+  
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;  
+}
+
+.catalog-info { 
+  margin: 0;
+  padding-top: 64px;
+  padding-bottom: 68px;
+  
+  color: #000;
+  background: #f2f6f8;
+}
+
+.catalog-info h4 {
+  margin: 0;
+  margin-bottom: 25px;
+  
   font-size: 30px;
   font-weight: 400;
+  text-transform: uppercase;
+  text-align: left;    
+}
+
+.catalog-info p {
+  margin: 0;  
+  font-family: PTSans, Arial, sans-serif; 
+  font-size: 13px;
+  line-height: 1.85em;  
 }
