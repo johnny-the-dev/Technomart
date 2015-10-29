@@ -13,7 +13,10 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 
 */
 
+/*  при уменьшении экрана начинают неправильно вести себя инлайн блоки в разделе "популярные товары", "популярные производители", и в меню хедера иногда (падают на следующую строку), хотя в футере все нормально
 
+для "популяных производителей" и "популярных товаров" увеличил ширину на 30px больше центровщика и сделал text-align:left, вроде перестали выпадать, но можно ли так делать?=/ (при уменьшении экрана инлайн блоки теперь выходят немного за границу центровщика)
+*/
 
 .clearfix:after {
   content: '';
@@ -28,7 +31,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 
 .btn {
   display: inline-block;
-  height: 38px;
+  min-height: 38px;
   line-height: 38px;
   vertical-align: middle;
   
@@ -57,35 +60,46 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 
 .top-panel {
   background: #293449;
-  height: 42px;
+  min-height:42px;
+  padding: 0;
   margin-bottom: 45px;
 }
 .logo {
   float: left;
   width: 220px;
   
-  background: #ee3643;
   color: #fff;
   font-size: 24px;
   line-height: 42px;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+  
+  background: #ee3643;
+  box-shadow: 0 5px 0 0 #b52933;
+  -webkit-box-shadow: 0 5px 0 0 #b52933;
+  -moz-box-shadow: 0 5px 0 0 #b52933;
+  
 }
 
 .header_user-panel {
   float: right;
-  
-  text-align: left;
-  margin-top: 0;
+  width: 715px;
+  text-align: right;
+  margin: 0;
+  padding: 0;
 }
 
 .header_user-panel li {
   display: inline-block;  
-  vertical-align: middle;
-  width: 150px;
+  vertical-align: top;
+  width: 145px;
   text-align: center;
-  margin-left: -4px;  
+  margin-left: -5px;  
+}
+
+.header_user-panel li:last-of-type {
+background: #63a63e;
 }
 
 .header_user-panel a {  
@@ -95,7 +109,9 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 }
 
 .header_user-panel .form-search {
-  width: 230px;
+  width: 270px;
+  text-align: left;
+  padding-top: 10px;
 }
 
 .header_user-panel input {
@@ -106,6 +122,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   float: left;
   margin-left: 50px;
   margin-right: 20px;
+  margin-bottom: 30px;
   width: 250px;
   min-height: 68px;
   
@@ -137,8 +154,9 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 
 .header_user-block {
   float: right;
-  width: 295px;
+  width: 300px;
   min-height: 45px;
+  text-align: right;
 }
 
 .header_user-block .registration {
@@ -170,45 +188,170 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 
 .header_main-nav {
   width: auto;
-  height: 55px; 
-   
+  padding: 0;
   background: #32425c;
+  border-bottom: 5px solid #293449;
+}
+
+.header_main-nav ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .header_main-nav li {
   display: inline-block;   
   vertical-align: top;
+  padding: 19px 20px;
+  text-align: center;
 }
 
 .header_main-nav span,
 .header_main-nav a {
-  padding-right: 20px;
-  padding-left: 20px;
+  color: #fff;
+  text-decoration: none;   
+}
+
+
+
+.main-footer {
+  background: #32425c;
+}
+
+.main-footer .logo {
+  font-size: 30px;
+  line-height: 63px;  
+}
+
+.footer--menu {
+  float: right;
+  margin-top: 0;
+}
+
+.footer--menu li {
+  display: inline-block;
+  width: 113px;
+  vertical-align: top;
+  text-align: right;
+  padding-top: 39px;
+  padding-bottom: 0;  
+}
+
+.footer--menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;  
+}
+
+.footer--address {
+  float: left;
+  width: 330px;
+  min-height: 50px;
+  padding-top: 20px;
+  
+  font-size: 18px;  
+}
+
+.footer--add-menu {
+  float: right;
+  margin-bottom: 73px;
+}
+
+.footer--add-menu li {
+  display: inline-block;
+  vertical-align: top;  
+  text-align: right;
+  padding-left: 35px;
+  padding-top: 5px;
+}
+
+.footer--add-menu li:first-of-type {
+  padding-left: 0;
+}
+
+.footer--add-menu a {
+  color: #ffd180;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.footer_social-info {
+  background: #293449;
+  min-height: 107px;
+  padding-top: 40px;  
+}
+
+.footer_social-info .copyright {
+  float: left;
+  width: 235px;  
+  
+  font-size: 16px;
+}
+
+
+.footer--social {
+  float: left;
+  width: 150px;
+  margin-left: 155px;
+  margin-top: -5px;
+}
+
+.footer--social a {
+  display: inline-block;
+  width: 41px;
+  line-height:41px;
+  text-align: center;
   
   color: #fff;
   text-decoration: none;
-  line-height: 55px;
-  text-align: center; 
+  
+  background: #212a3a;
+  border-radius: 50%;  
 }
 
-.header_main-nav span {
-  margin-left: -10px;
+.footer--promo {
+  float: right;   
 }
 
+.footer--promo [class^="column-"] {
+  display: inline-block;  
+  text-align: left;
+  
+  font-size: 16px;
+  line-height: 1.1em;
+}
+
+.footer--promo .column-1 {
+  width: 170px;  
+}
+
+.footer--promo .column-2 {
+  width: 120px;
+}
+
+.footer--promo a {
+  color:#ffd180;
+  text-decoration: none;
+}
 
 /* index.html */
 
 
 .main-index {
-  padding-top: 60px;
-}
-
-.promo-catalog {
-  padding-bottom: 85px;
+  padding-top: 60px;  
 }
 
 .promo {
-  margin-bottom: 53px;
+  margin-bottom: 33px;
+}
+
+.promo-container {
+  float: left;
+  vertical-align: top;
+  height: 123px;
+  width: 275px;  
+  margin-bottom: 20px; 
+  padding-left: 25px;
 }
 
 .promo a {
@@ -227,20 +370,11 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   background: rgba(0,0,0,0.1);  
 }
 
-.promo-container {
-  float: left;
-  vertical-align: top;
-  height: 120px;
-  width: 275px;  
-  margin-bottom: 20px; 
-  padding-left: 25px;
-}
-
 .big-promo {
   float:left;
   position: relative;  
   width: 620px;
-  height: 260px;
+  height: 266px;
   margin-right: 20px;  
 }
 
@@ -255,7 +389,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 .slider-slides img {
   float: left;
   width: 620px;
-  height: 260px;
+  height: 266px;
 }
 
 .big-promo input[type="radio"] {
@@ -404,12 +538,17 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   margin-top: 24px;
 }
 
+.catalog-items {
+  width: 975px;
+  text-align: left;
+}
+
 .item {
   position: relative;
   display: inline-block;
   vertical-align: top;
   width: 218px;
-  height: 316px;
+  min-height: 316px;
   margin-right: 15px;
   margin-bottom: 20px;
     
@@ -521,9 +660,9 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 }
 
 .item:hover {
-  -moz-box-shadow: 0 0 25px 5px #ddd;
-  -webkit-box-shadow: 0 0 25px 5px #ddd; 
   box-shadow: 0 0 25px 5px #ddd;
+  -moz-box-shadow: 0 0 25px 5px #ddd;
+  -webkit-box-shadow: 0 0 25px 5px #ddd;  
 }
 
 .item-actions .buy:link,
@@ -567,6 +706,12 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   border-left-color: #ee3643;
 }
 
+.manufacturers {
+  margin-bottom: 64px;
+  width: 980px;
+  text-align: left;
+}
+
 .manufacturers a {
   display: inline-block;
   height: 142px;
@@ -590,17 +735,20 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   vertical-align: middle;
 }
 
+
+
 .add-info {
-  min-height: 521px;
-  padding-top: 25px;
-  padding-bottom: 101px;
+  min-height: 500px;
+  margin-bottom: 78px;
+  padding-top: 23px;  
   background: #f2f6f8;
 }
 
 .services {
   width: 430px;
   min-height: 110px;
-  margin-bottom: 61px;
+  margin-top: 0;
+  margin-bottom: 63px;
   text-align: left;
   color: #000;
 }
@@ -619,41 +767,180 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 }
 
 .tabs {
-  position: relative;
+  width: auto;
 }
 
-.dd {
+.tabs input {
   display: none;  
 }
 
-.tab-header {  
+.tab-switches {
+  float: left;
+  width: 240px;
+}
+
+.tab-switches label {
+  display: block;
+  width: auto;
+  padding: 18px 0;
+  padding-left: 20px;
+  
+  background: #32425c;
+  border-top: 1px solid #405069;
+  border-bottom: 1px solid #293449;
+  font-size: 21px;
+  
+  cursor: pointer;
+}
+
+.tab-info {  
+  float: right;
+  width: 700px;  
+}
+
+.tab-info .component{
+  display: none;
+  width: auto;
+  min-height: 287px;  
+  padding-left: 80px;
+  color: #000;
+}
+
+.tab-info .header {  
   color: #32425c;
+  text-transform: uppercase;
+  margin-top: -2px;
+  margin-bottom: 25px;
   font-size: 36px;
   font-weight: 400;
 }
 
-.contact-block h4{
+.tab-info p {
+  width: 280px;
+  font-family: PTSans, Arial, sans-serif; 
+  font-size: 13px;
+  line-height: 1.85em;
+  margin-bottom: 0;
+}
+
+.tab-delivery {
+  background: url('../img/tab-delivery.png') 100% 100% no-repeat;
+}
+
+.tab-guarantee {
+  background: url('../img/tab-guarantee.png') 100% 100% no-repeat;
+}
+
+.tab-guarantee p {
+  width: 380px;
+}
+
+.tab-credit {
+  background: url('../img/tab-credit.png') 100% 100% no-repeat;
+}
+
+.tab-credit p {
+  margin-bottom: 30px;
+}
+
+.tab-credit .btn {
+  width: 195px;  
+}
+
+.tabs #tab1:checked ~ .tab-switches label:first-of-type,
+.tabs #tab2:checked ~ .tab-switches label:nth-of-type(2),
+.tabs #tab3:checked ~ .tab-switches label:nth-of-type(3) {
+  color: #32425c;
+  background: #fff;
+  border-color: #fff;
+}
+
+.tabs #tab1:checked ~ .tab-info .tab-delivery,
+.tabs #tab2:checked ~ .tab-info .tab-guarantee,
+.tabs #tab3:checked ~ .tab-info .tab-credit {
+  display: block;
+}
+
+
+
+.contact-block {  
+  color: #000;
+}
+
+.contact-block h4 {
+  margin-top: -2px;
+  margin-bottom: 28px;
+  
   color: #000;
   font-size: 30px;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
-.contact-block {
-  color: #000;
+.contact-block p {
+  margin-top: 0;
+  
+  font-family: PTSans, Arial, sans-serif; 
+  font-size: 13px;
+  line-height: 1.85em;
 }
 
 .company-description {
   float:left;
-  width: 530px;  
+  width: 525px;
+  margin-bottom: 66px;
 }
 
-.contact-block .adress {
+.company-description p {
+  margin-bottom: 24px;  
+}
+
+.company-description ul {
+  margin-bottom: 38px;
+}
+
+.company-description li {
+  position: relative;  
+  margin-bottom: 20px;
+  font-size: 18px;
+  list-style: none;  
+}
+
+.company-description .marker {
+  position: absolute;
+  display: block;
+  left: -8%;
+  top: 45%;
+  width: 25px;
+  height: 0;
+  border-top: 2px solid #fb565a;
+}
+
+.company-description .btn {
+  width: 220px;  
+}
+
+.map-address {
   float: right;
-  width: 320px;
+  min-height: 370px;
+  width: 300px;
 }
-.contact-block iframe {
-  display: none;
+
+.map-address p {
+  width: 195px;
+  margin-bottom: 30px;
 }
+
+.map-address img {
+  margin-bottom: 38px;
+}
+
+.map-address .btn {
+  width: 300px;  
+}
+
+
+
 
 /*catalog.html*/
 
