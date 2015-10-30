@@ -1275,6 +1275,19 @@ background: #293449;
   border-radius: 2px;  
 }
 
+.pagination span {
+  background: #ee3643;
+  border-color: #ee3643;  
+}
+
+.pagination a:hover {
+  border-color: #bdc6ca;
+}
+
+.pagination a:active {
+  border-color: #ee3643;
+}
+
 .catalog-info { 
   margin: 0;
   padding-top: 64px;
