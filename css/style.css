@@ -200,21 +200,34 @@ background: #63a63e;
 .header_main-nav ul {
   margin: 0;
   padding: 0;
-  text-align: center;
+  text-align: center;  
 }
 
 .header_main-nav li {
   display: inline-block;   
-  vertical-align: top;
-  padding: 19px 20px;
+  vertical-align: top;  
   text-align: center;
+  margin-right: -6px;
 }
 
 .header_main-nav span,
 .header_main-nav a {
-  color: #fff;
+  display: block;
+  padding: 19px 24px;  
+  
+  color: #fff;  
   text-decoration: none;   
 }
+
+.header_main-nav li:hover {
+background: #293449;
+}
+
+.header_main-nav li:active {
+  color: #868c95;
+  background: #1d2739;   
+}
+/*    у бордера тоже цвет меняется при нажатии, но пока не получается =/   */
 
 /* user-block и активная корзина для catalog.html */
 
@@ -314,6 +327,21 @@ background: #63a63e;
   text-decoration: none;
 }
 
+.footer--menu a:hover,
+.footer--add-menu a:hover {
+  text-decoration: underline;
+}
+
+.footer--menu a:active {
+  color: #929caa;
+  text-decoration: none;
+}
+
+.footer--add-menu a:active {
+  color: #998a6e;
+  text-decoration: none;
+}
+
 .footer_social-info {
   background: #293449;
   min-height: 107px;
@@ -326,7 +354,6 @@ background: #63a63e;
   
   font-size: 16px;
 }
-
 
 .footer--social {
   float: left;
@@ -346,6 +373,10 @@ background: #63a63e;
   
   background: #212a3a;
   border-radius: 50%;  
+}
+
+.footer--social a:hover {
+  background: #ee3643;
 }
 
 .footer--promo {
@@ -373,6 +404,16 @@ background: #63a63e;
   text-decoration: none;
 }
 
+.footer--promo a:hover {
+  text-decoration: underline;
+}
+
+.footer--promo a:active {
+  color: #ee3643;
+  text-decoration: none;
+}
+
+
 /* index.html */
 
 
@@ -393,7 +434,7 @@ background: #63a63e;
   padding-left: 25px;
 }
 
-.promo a {
+.promo--btn {
   display: block;
   height: 37px;
   width: 135px;
@@ -407,6 +448,14 @@ background: #63a63e;
   text-align: center;  
   
   background: rgba(0,0,0,0.1);  
+}
+
+.promo--btn:hover {
+  background: rgba(0,0,0,0.2);  
+}
+
+.promo--btn:active {
+  background: rgba(0,0,0,0.3);
 }
 
 .big-promo {
@@ -500,7 +549,7 @@ background: #63a63e;
   -ms-transform: translate(-620px);
 }
 
-.big-promo a {
+.big-promo .btn {
   position: absolute;
   top: 206px;
   left: 24px;
@@ -509,6 +558,14 @@ background: #63a63e;
   
   background: #ee3643;
   font-size: 14px;    
+}
+
+.big-promo .btn:hover {
+  background: #ca2c37;
+}
+
+.big-promo .btn:active {
+  background: #ba2732;
 }
 
 .promo1 {
@@ -688,6 +745,15 @@ background: #63a63e;
   border-bottom-color: #63a63e;    
 }
 
+.item-actions .bookmark:hover {
+  border-color: #32425c;
+}
+
+.item-actions .bookmark:active {
+  color: #c1c6ce;
+  border-color: #c1c6ce;
+}
+
 .item:not(:hover) .item-actions {
   display: none;
 }
@@ -699,13 +765,13 @@ background: #63a63e;
 }
 
 .item:hover {
-  box-shadow: 0 0 25px 5px #ddd;
-  -moz-box-shadow: 0 0 25px 5px #ddd;
-  -webkit-box-shadow: 0 0 25px 5px #ddd;  
+  border-color: transparent;
+  box-shadow: 0 8px 25px 7px #ccc;
+  -moz-box-shadow: 0 8px 25px 7px #ccc;
+  -webkit-box-shadow: 0 8px 25px 7px #ccc;  
 }
 
-.item-actions .buy:link,
-.item-actions .buy:visited {
+.item-actions .buy {
   background: #63a63e;
 }
 
@@ -770,11 +836,24 @@ background: #63a63e;
   margin-right: 0;
 }
 
+.manufacturers a:hover {
+  border-color: transparent;
+  box-shadow: 0 10px 25px 8px #ddd;
+  -moz-box-shadow: 0 10px 25px 8px #ddd;
+  -webkit-box-shadow: 0 10px 25px 8px #ddd;  
+}
+
+.manufacturers a:active {
+  opacity: 0.4;
+  border-color: transparent;
+  box-shadow: 0 7px 20px 0 #000;
+  -moz-box-shadow: 0 7px 20px 0 #000;
+  -webkit-box-shadow: 0 7px 20px 0 #000;  
+}
+
 .manufacturers img {
   vertical-align: middle;
 }
-
-
 
 .add-info {
   min-height: 500px;
@@ -818,6 +897,8 @@ background: #63a63e;
   width: 240px;
 }
 
+
+
 .tab-switches label {
   display: block;
   width: auto;
@@ -830,6 +911,10 @@ background: #63a63e;
   font-size: 21px;
   
   cursor: pointer;
+}
+
+.tab-switches label:hover {
+  background: #293449;
 }
 
 .tab-info {  
