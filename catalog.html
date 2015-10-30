@@ -14,12 +14,12 @@
           <ul class="header_user-panel">
             <li class="form-search">
               <form class="item-search" action="#" method="post">
-                <button type="submit">Поиск</button> 
+                <button type="submit"><i class="icon-search"></i>Поиск</button> 
                 <input type="search" name="catalog-search">              
               </form>
             </li>
-            <li><a class="bookmarks" href="#">Закладки: 0</a></li>           
-            <li class="active"><a class="basket" href="#">Корзина: 10</a></li>    
+            <li><a class="bookmarks" href="#"><i class="icon-bookmark"></i>Закладки: 0</a></li>           
+            <li class="active"><a class="basket" href="#"><i class="icon-basket"></i>Корзина: 10</a></li>    
             <li><a class="submit" href="#">Оформить заказ</a></li>
           </ul>
         </div>
@@ -31,7 +31,8 @@
         </div>
         <div class="header_contacts">
           <div class="phone">
-            +7 (812) 555-05-55
+            <i class="icon-phone"></i>
+            <span>+7 (812) 555-05-55</span>
           </div>
           <div class="address">
             г.Санкт-Петербург,ул. Б. Конюшенная, д. 19/8
@@ -39,8 +40,8 @@
         </div>
         <div class="header_user-block">
           <div class="user-name">
-            <a class="user-profile" href="#">Равшан Джамшутович</a>
-            <a class="exit" href="#">exit</a>
+            <a class="user-profile" href="#"><i class="icon-user"></i>Равшан Джамшутович</a>
+            <a class="exit" href="#"><i class="icon-logout"></i></a>
           </div>
           <div class="user-refs">
             <a href="#">Мои заказы</a>
@@ -65,7 +66,7 @@
     <div class="catalog-main">
      <div class="container clearfix">      
       <ul class="breadcrumbs">
-        <li><a href="#">главная</a></li>
+        <li><a href="#"><i class="icon-home"></i></a></li>
         <li><a href="#"><div class="marker"></div>каталог</a></li>
         <li><a href="#"><div class="marker"></div>инструмент</a></li>
         <li><div class="marker"></div><span class="active">перфораторы</span></li>
@@ -75,27 +76,33 @@
         <span class="common-headers">фильтр:</span>
         <form action="#" method="post">
           <div class="price-range">
-            <h2>цена</h2>                  
+            <h2>цена</h2>
+            <div class="range-toddler"></div>
+            <div class="price-form">
+              <label for="min-price">мин</label><input type="number" name="min-price" id="min-price" min="0" max="30000" step="1" value="0">
+              <label for="max-price">макс</label><input type="number" name="max-price" id="max-price" min="0" max="30000" step="1" value="30000">
+<!--              не пойму почему в браузере не появляются формы  =/  -->
+            </div>                
           </div>
           <div class="manufacturer-range">
             <h2>производители</h2>
-            <label><input type="checkbox" name="manufacturer" value="bosch">bosch</label>
-            <label><input type="checkbox" name="manufacturer" value="interskol">интерскол</label>
-            <label><input type="checkbox" name="manufacturer" value="makita">makita</label>
-            <label><input type="checkbox" name="manufacturer" value="dewalt">dewalt</label>
-            <label><input type="checkbox" name="manufacturer" value="hitachi">hitachi</label>
+            <input type="checkbox" id="manufacturer1" name="manufacturer" value="bosch"><label for="manufacturer1">bosch</label>
+            <input type="checkbox" id="manufacturer2" name="manufacturer" value="interskol"><label for="manufacturer2">интерскол</label>
+            <input type="checkbox" id="manufacturer3" name="manufacturer" value="makita"><label for="manufacturer3">makita</label>
+            <input type="checkbox" id="manufacturer4" name="manufacturer" value="dewalt"><label for="manufacturer4">dewalt</label>
+            <input type="checkbox" id="manufacturer5" name="manufacturer" value="hitachi"><label for="manufacturer5">hitachi</label>
           </div>
           <div class="supply">
             <h2>питание</h2>
-            <label><input type="radio" name="supply" value="battery">аккумуляторные</label>
-            <label><input type="radio" name="supply" value="ac-power">сетевые</label>
+            <input type="radio" id="supply1" name="supply" value="battery"><label for="supply1">аккумуляторные</label>
+            <input type="radio" id="supply2" name="supply" value="ac-power"><label for="supply2">сетевые</label>
           </div>
           <button type="submit">показать</button>            
         </form>      
       </div>
       <div class="catalog-column">
         <div class="sorting-panel common-headers">
-          сортировка:
+          <span>сортировка:</span>
           <ul>
             <li><a href="#" class="active">по цене</a></li>
             <li><a href="#">по типу</a></li>
@@ -248,9 +255,9 @@
             Все права защищены
           </div>
           <div class="footer--social">          
-            <a href="#" class="social-btn social-btn-vk">vk</a>
-            <a href="#" class="social-btn social-btn-fb">fb</a>
-            <a href="#" class="social-btn social-btn-inst">inst</a>
+            <a href="#" class="social-btn"><i class="icon-vk"></i></a>
+            <a href="#" class="social-btn"><i class="icon-facebook"></i></a>
+            <a href="#" class="social-btn"><i class="icon-instagramm"></i></a>
           </div>
           <div class="footer--promo">
             <div class="column-1">
