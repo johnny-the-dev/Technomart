@@ -150,8 +150,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 }
 
 .top-panel {
-  background: #293449;
-  min-height:42px;
+  background: #293449;  
   padding: 0;
   margin-bottom: 45px;
 }
@@ -161,7 +160,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   
   color: #fff;
   font-size: 24px;
-  line-height: 42px;
+  line-height: 1.75em;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -182,31 +181,43 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 }
 
 .header_user-panel li {
-  display: inline-block;  
-  vertical-align: top;
-  width: 145px;
-  text-align: center;
-  margin-left: -5px;  
+  float: left;
+  display: block;  
+  width: 145px;  
+  
+  text-align: center;    
 }
 
 .header_user-panel li:last-of-type {
 background: #63a63e;
 }
 
-.header_user-panel a {  
+.header_user-panel .form-search {
+  width: 280px;
+  text-align: left;
+}
+
+.header_user-panel .item-search,
+.header_user-panel a {
+  display: block;
+  width: auto;
   line-height: 42px;  
   color: #fff;
   text-decoration: none;
 }
 
-.header_user-panel .form-search {
-  width: 270px;
-  text-align: left;
-  padding-top: 10px;
+.item-search input {
+  width: 170px;
+  height: 30px;
+  background: transparent;
+  border: none;  
 }
 
-.header_user-panel input {
-  width: 170px;
+.item-search button {
+  color: #fff;
+  background: none;
+  border: none;
+  
 }
 
 .header_description {
@@ -279,42 +290,51 @@ background: #63a63e;
 
 .header_main-nav {
   width: auto;
-  padding: 0;
-  background: #32425c;
-  border-bottom: 5px solid #293449;
+  padding: 0;  
 }
 
 .header_main-nav ul {
   margin: 0;
-  padding: 0;
-  text-align: center;  
+  padding: 0;    
 }
 
 .header_main-nav li {
-  display: inline-block;   
-  vertical-align: top;  
+  float: left;  
+  display: block;    
   text-align: center;
-  margin-right: -6px;
+  width: 125px;
+  
+  background: #32425c;
+  border-bottom: 5px solid #293449;
 }
 
-.header_main-nav span,
+.header_main-nav li:nth-of-type(5) {
+  width: 160px;
+}
+
+.header_main-nav li:first-of-type, .header_main-nav li:last-of-type {
+  width: 140px;
+}
+
 .header_main-nav a {
   display: block;
-  padding: 19px 24px;  
+  width: auto;
+  padding: 19px 0;
   
   color: #fff;  
   text-decoration: none;   
 }
 
 .header_main-nav li:hover {
-background: #293449;
+  background: #293449;
 }
 
 .header_main-nav li:active {
   color: #868c95;
-  background: #1d2739;   
+  background: #1d2739;
+  border-color: #1d2739;   
 }
-/*    у бордера тоже цвет меняется при нажатии, но пока не получается =/   */
+
 
 /* user-block и активная корзина для catalog.html */
 
@@ -359,7 +379,7 @@ background: #293449;
 
 .main-footer .logo {
   font-size: 30px;
-  line-height: 63px;  
+  line-height: 2.1em;  
 }
 
 .footer--menu {
