@@ -98,11 +98,9 @@ body {
 
 div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: green solid 1px}
 
-*/
+*/ 
 
-/*  при уменьшении экрана начинают неправильно вести себя инлайн блоки в разделе "популярные товары", "популярные производители", и в меню хедера иногда (падают на следующую строку), хотя в футере все нормально
-
-для "популяных производителей" и "популярных товаров" увеличил ширину на 30px больше центровщика и сделал text-align:left, вроде перестали выпадать, но можно ли так делать?=/ (при уменьшении экрана инлайн блоки теперь выходят немного за границу центровщика)
+/* для "популяных производителей" и "популярных товаров" увеличил ширину на 30px больше центровщика и сделал text-align:left, вроде перестали выпадать, но можно ли так делать?=/ (при уменьшении экрана инлайн блоки теперь выходят немного за границу центровщика)
 */
 
 /*  общие элементы  */
@@ -336,6 +334,10 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   border: 3px solid #fff;
 }
 
+.header_contacts .phone i { 
+  color: #c5c5c5;
+}
+
 .header_user-block {
   float: right;
   width: 300px;
@@ -370,6 +372,29 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   background: #fff;
 }
 
+.header_user-block .enter i {  
+  margin-right: 9px;
+  color: #c5c5c5;
+}
+
+.header_user-block .registration:hover,
+.header_user-block .enter:hover {
+  color: #ee3643;
+}
+
+.header_user-block .enter:hover i {
+  color: #32425c;
+}
+
+.header_user-block .registration:active,
+.header_user-block .enter:active {
+  color: #b2b2b2;
+}
+
+.header_user-block .enter:active i {
+  color: #c5c5c5;
+}
+
 .header_main-nav {
   width: auto;
   padding: 0;  
@@ -394,7 +419,8 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   width: 160px;
 }
 
-.header_main-nav li:first-of-type, .header_main-nav li:last-of-type {
+.header_main-nav li:first-of-type,
+.header_main-nav li:last-of-type {
   width: 140px;
 }
 
@@ -424,17 +450,50 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   background: #ee3643;
 }
 
-.header_user-block .user-name {
+.header_user-block .user-profile {
   background: #fff;
-  width: 300px;
+  width: 300px;    
+  
   line-height: 44px;
   text-align: center;  
 }
 
-.header_user-block .user-profile {
+.user-profile .name {
   font-size: 21px;
   color: #000;
   text-decoration: none;
+}
+
+.user-profile span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 230px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.user-profile i {
+  color: #c5c5c5;
+}
+
+.user-profile .exit:hover i{
+  color: #32425c;  
+}
+
+.user-profile .exit:active i{
+  color: #c5c5c5;  
+}
+
+.user-profile .name:hover i {
+  color: #32425c;
+}
+
+.user-profile .name:active {
+  color: #b2b2b2;
+}
+
+.user-profile .name:active i {
+  color: #c5c5c5;
 }
 
 .header_user-block .user-refs {
@@ -445,6 +504,14 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 .user-refs a {
   font-size: 16px;
   color: #32425c;  
+}
+
+.user-refs a:hover {
+  color: #ee3643;
+}
+
+.user-refs a:active {
+  color: #b7bfc8;
 }
 
 .user-refs span {
@@ -669,17 +736,8 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   height: 266px;
 }
 
-.big-promo input[type="radio"] {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  left: 48.5%;
-  bottom: 12%;
-  z-index: 20; 
-}
-
-.big-promo input[type="radio"]:first-of-type {
-  left: 51.5%;
+.big-promo input{
+  display: none;
 }
 
 .arrowy-controls .next {
@@ -720,6 +778,33 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   -ms-transform: rotate(225deg);
   
   cursor: pointer;
+}
+
+.big-promo label:after {
+  position: absolute;
+  display: inline-block;
+  right: 260px;
+  top: 125px;
+  
+  width: 8px;
+  height: 8px;  
+  z-index: 20;
+  
+  content: '';
+  
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.big-promo .next:after {
+  right: 125px; 
+  top: 260px;
+}
+
+#btn-1:checked ~ .arrowy-controls .prev:after,
+#btn-2:checked ~ .arrowy-controls .next:after {
+  background: #ee3643;
 }
 
 #btn-1:checked ~ .slider-inner .slider-slides {
@@ -1086,8 +1171,6 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   width: 240px;
 }
 
-
-
 .tab-switches label {
   display: block;
   width: auto;
@@ -1339,13 +1422,41 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   font-weight: 700;
 }
 
-.search-column label {
+.search-column .manufacturer-range input,
+.search-column .supply input {
+  display: none;
+}
+
+.search-column .manufacturer-range label,
+.search-column .supply label {
   display: block;
   width: auto;
   margin: 2px 0;  
   padding: 5px 0;
   
   cursor: pointer;
+}
+
+.price-range {
+  margin-bottom: 24px;
+}
+
+.price-range input {
+  border: none;
+  outline: none;
+  width: 95px;
+  line-height: 38px;
+  text-align: center;
+  
+  font-size: 17px;
+  background: #f7f3ec;
+  border-radius: 5px;
+}
+
+.price-range span {
+  display: inline-block;
+  text-align: center;
+  width: 20px;
 }
 
 .search-column .manufacturer-range {
@@ -1356,7 +1467,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   border-bottom: 1px solid #e5e5e5;  
 }
 
-input[type="checkbox"] + label:before {
+.manufacturer-range input[type="checkbox"] + label:before {
   display: inline-block;
   vertical-align: top;
   margin-top: -6px;
@@ -1370,12 +1481,13 @@ input[type="checkbox"] + label:before {
   line-height: 1em;
 }
 
-input[type="checkbox"]:checked + label:before {
+.manufacturer-range input[type="checkbox"]:checked + label:before {
   content: '\2611';  
 }
 
-.search-column input {
-  display: none;
+.manufacturer-range input[type="checkbox"] + label:hover:before,
+.manufacturer-range input[type="checkbox"]:checked + label:hover:before {
+  color: #b5b5b5;
 }
 
 .search-column .supply {
@@ -1409,9 +1521,14 @@ input[type="checkbox"]:checked + label:before {
   -moz-box-shadow: inset 0 0 0 5px #fff;    
 }
 
-.supply label:hover label:before {
+.supply input[type="radio"] + label:hover:before {
+  border-color: #b5b5b5;
 }
-/*  смена цвета при ховере, пока не получается  */
+
+.supply input[type="radio"]:checked + label:hover:before {
+  background: #b5b5b5;  
+}
+
 
 .search-column button {
   width: 138px;
