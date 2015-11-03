@@ -6,7 +6,7 @@
     <meta name="description" content="Интернет-магазин строительных материалов и инструментов для ремонта">
     <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400italic,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
   </head>
   <body>
     <header class="main-header">     
@@ -37,7 +37,7 @@
             <span>+7 (812) 555-05-55</span>
           </div>
           <div class="address">
-            г.Санкт-Петербург,ул. Б. Конюшенная, д. 19/8
+            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
           </div>
         </div>
         <div class="header_user-block">
@@ -183,8 +183,8 @@
           <div class="tab-info">
             <div class="component tab-delivery">
               <h4 class="header">доставка</h4>
-              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
-                  Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
+              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!</p>
+              <p>Ведь мы неплохо заработаем, поднимая его на ваш на этаж!</p>
             </div>
             <div class="component tab-guarantee">
               <h4 class="header">гарантия</h4>
@@ -213,9 +213,9 @@
           <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
              Техномарт работает со многими транспортными компаниями:</p>
           <ul>
-            <li><div class="marker"></div>Деловые линии</li>
-            <li><div class="marker"></div>Автотрейдинг</li>
-            <li><div class="marker"></div>ЖелДорЭкспедиция</li>  
+            <li>Деловые линии</li>
+            <li>Автотрейдинг</li>
+            <li>ЖелДорЭкспедиция</li>  
           </ul>
           <a class="btn" href="#">подробнее о компании</a> 
         </div>
@@ -223,14 +223,36 @@
           <h4>контакты</h4>
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>
           <a href="#google-map"><img src="img/small-map.png" width="300px" height="160px" alt="карта"></a>
-          <a class="btn" href="#">заблудились? напишите нам</a>
+          <a class="btn" href="#">заблудились? напишите нам</a>          
           <div class="big-map">
             <button class="map-close" type="submit"></button>            
-            <iframe id="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123625!2d30.320894615640324!3d59.93879686904851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1445463719923" width="0" height="0" frameborder="0" style="border:0" allowfullscreen><img src="#" alt="google.maps"></iframe>
-<!--      пока что поставил размеры гугл-курты на 0, чтобы скрыть
-          width="940" height="447"      -->
+            <iframe id="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123625!2d30.320894615640324!3d59.93879686904851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1445463719923" width="940px" height="447px" frameborder="0" style="border:0" allowfullscreen><img src="#" alt="google.maps"></iframe>
+
           </div>
         </div>
+        <div class="modal-writeus">
+          <div class="modal-writeus_close">закрыть</div>
+          <form action="#" method="post">
+            <div class="modal-writeus_white">       
+              <div class="modal-writeus--user-info">       
+                <label for="writeus-name">Ваше имя:</label>
+                <input type="text" id="writeus-name" name="name" placeholder="Представьтесь, пожалуйста" required>
+              </div>
+              <div class="modal-writeus--user-info"> 
+                <label for="writeus-email">Ваш e-mail:</label>
+                <input type="email" id="writeus-email" name="email" placeholder="Для отправки ответа" required>
+              </div>
+              <div class="modal-writeus--description">
+                <label for="writeus-description">Текст письма:</label>
+                <textarea id="writeus-description" placeholder="В свободной форме" required></textarea>
+              </div>
+            </div>
+            <div class="modal-writeus--buttons clearfix">
+              <button class="btn" type="submit">отправить</button>
+              <button class="btn" type="reset">отмена</button>                   
+            </div>        
+          </form>
+        </div> 
       </div>            
     </div>
     <footer class="main-footer">      
@@ -245,7 +267,7 @@
         </ul>
         <div class="clearfix"></div>
         <div class="footer--address">
-          г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
+          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
           +7 (812) 555-05-55
         </div>
         <ul class="footer--add-menu">
@@ -262,9 +284,9 @@
             Все права защищены
           </div>
           <div class="footer--social">          
-            <a href="#" class="social-btn"><i class="icon-vk"></i></a>
-            <a href="#" class="social-btn"><i class="icon-facebook"></i></a>
-            <a href="#" class="social-btn"><i class="icon-instagramm"></i></a>
+            <a href="#" class="social-btn icon-vk"></a>
+            <a href="#" class="social-btn icon-facebook"></a>
+            <a href="#" class="social-btn icon-instagramm"></a>
           </div>
           <div class="footer--promo">
             <div class="column-1">
@@ -278,6 +300,6 @@
           </div>
         </div>             
       </div>        
-    </footer>  
+    </footer>      
   </body>
 </html>

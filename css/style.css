@@ -86,12 +86,17 @@
 
 
 body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  
   font-family: Cuprum, Arial, sans-serif;
   color: #fff;
   font-size: 17px;
+  line-height: 1.25em;
   font-weight: 400;
-  background: #fff;
   
+  background: #fff;  
 }
 
 /* выделение границ 
@@ -114,6 +119,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 .container {
   width: 940px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 .btn {
@@ -129,7 +135,19 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   text-align: center;
   
   background: #ee3643;
+  border: none;
+  outline: none;
   border-radius: 3px; 
+  
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #ca2c37;
+}
+
+.btn:active {
+  background: #ba2732;
 }
 
 .new-item {  
@@ -144,14 +162,14 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 
 .main-header {
   background: #f1f5f7;
-  padding-bottom: 65px;
+  padding-bottom: 60px;
 }
 
 .top-panel {
-  background: #293449;  
   padding: 0;
-  margin-bottom: 45px;
+  margin-bottom: 44px;
   white-space: nowrap;
+  background: #293449;
 }
 .logo {
   float: left;
@@ -159,7 +177,8 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   
   color: #fff;
   font-size: 24px;
-  line-height: 1.75em;
+  font-weight: bold;
+  line-height: 42px;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -194,6 +213,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 .header_user-panel a i {
   color: #6a7180;
   margin-right: 9px;
+  margin-left: -12px;
 }
 
 .header_user-panel li {
@@ -255,8 +275,10 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 
 .item-search input {
   float: right;
-  width: 225px;
+  width: 230px;
   height: 42px;
+  padding-left: 10px;
+  
   color: #000;
   font-size: 17px;
   background: transparent;
@@ -267,6 +289,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 .item-search label {
   position: absolute;
   left: 50px;
+  cursor: text;
 }
 
 .item-search input:focus {
@@ -302,22 +325,43 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 
 .header_description {
   float: left;
-  margin-left: 50px;
-  margin-right: 20px;
-  margin-bottom: 30px;  
-  width: 250px;
+  width: 200px;
   min-height: 68px;
+  margin-left: 52px;
+  margin-bottom: 40px;
+  padding-top: 5px;
+  
   
   color: #ee3643;
+  font-size: 16px;
+  line-height: 23px;
+  font-style: italic;
   text-align: left;
 }
 
 .header_contacts {
   float: left;
   width: 270px;
-    
+  margin-left: 69px;
+  
   color: #ee3643;
   text-align: center;
+}
+
+.header_contacts .phone {
+  width: 219px;
+  padding-right: 42px;
+  margin-bottom: 5px;
+  
+  font-size: 21px;
+  line-height: 42px;
+  
+  border: 3px solid #fff;
+}
+
+.header_contacts .phone i { 
+  color: #c5c5c5;
+  margin-right: 30px;
 }
 
 .header_contacts .address {
@@ -325,35 +369,24 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   font-size: 14px;
 }
 
-.header_contacts .phone {
-  width: 264px;  
-  
-  font-size: 21px;
-  line-height: 38px;
-  
-  border: 3px solid #fff;
-}
-
-.header_contacts .phone i { 
-  color: #c5c5c5;
-}
-
 .header_user-block {
   float: right;
   width: 300px;
-  min-height: 45px;
+  min-height: 48px;
+  
+  font-size: 21px;
   text-align: right;
 }
 
 .header_user-block .registration {
   display: inline-block;  
-  margin-left: 20px;
+  margin-left: 5px;
   width: 150px;
   vertical-align: top;
   
   color: #000;
   text-decoration: none;
-  line-height: 45px;  
+  line-height: 48px;  
   text-align: center;
   
   background: #fff;
@@ -366,14 +399,15 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   
   color: #000;
   text-decoration: none;
-  line-height: 45px;
-  text-align: center;
+  line-height: 48px;
+  text-align: left;
   
   background: #fff;
 }
 
 .header_user-block .enter i {  
-  margin-right: 9px;
+  margin-right: 8px;
+  margin-left: 10px;
   color: #c5c5c5;
 }
 
@@ -409,7 +443,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   float: left;  
   display: block;    
   text-align: center;
-  width: 125px;
+  width: 120px;
   
   background: #32425c;
   border-bottom: 5px solid #293449;
@@ -419,15 +453,20 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   width: 160px;
 }
 
-.header_main-nav li:first-of-type,
+.header_main-nav li:first-of-type {
+  width: 125px;
+  padding-left: 15px;
+}
+
 .header_main-nav li:last-of-type {
-  width: 140px;
+  width: 150px;
+  padding-right: 10px;
 }
 
 .header_main-nav a {
   display: block;
   width: auto;
-  padding: 19px 0;
+  padding: 17px 0;
   
   color: #fff;  
   text-decoration: none;   
@@ -453,7 +492,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 .header_user-block .user-profile {
   background: #fff;
   width: 300px;    
-  
+    
   line-height: 44px;
   text-align: center;  
 }
@@ -462,18 +501,29 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   font-size: 21px;
   color: #000;
   text-decoration: none;
+  margin-left: 7px;
 }
 
 .user-profile span {
   display: inline-block;
   vertical-align: middle;
-  width: 230px;
+  width: 210px;
+  margin-right: 4px;
+  padding-left: 10px;
+  
+  text-align: left;  
   white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .user-profile i {
   color: #c5c5c5;
+  font-size: 19px;
+}
+
+.user-profile .exit i {
+  font-size: 22px;
 }
 
 .user-profile .exit:hover i{
@@ -498,7 +548,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 
 .header_user-block .user-refs {
   text-align: left;
-  padding: 5px 16px;
+  padding: 5px 19px;
 }
 
 .user-refs a {
@@ -516,7 +566,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 
 .user-refs span {
   color: #32425c;
-  margin: 0 5px;
+  margin: 0 8px;
 }
 
 
@@ -534,11 +584,12 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 .footer--menu {
   float: right;
   margin-top: 0;
+  white-space: nowrap;
 }
 
 .footer--menu li {
   display: inline-block;
-  width: 113px;
+  width: 116px;
   vertical-align: top;
   text-align: right;
   padding-top: 39px;
@@ -553,24 +604,26 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 
 .footer--address {
   float: left;
-  width: 330px;
-  min-height: 50px;
+  width: 325px;
+  padding-left: 5px;
   padding-top: 20px;
   
-  font-size: 18px;  
+  font-size: 18px;
+  line-height: 1.3em;
 }
 
 .footer--add-menu {
   float: right;
-  margin-bottom: 73px;
+  margin-bottom: 75px;
+  white-space: nowrap;
 }
 
 .footer--add-menu li {
   display: inline-block;
   vertical-align: top;  
   text-align: right;
-  padding-left: 35px;
-  padding-top: 5px;
+  padding-left: 54px;
+  padding-top: 3px;
 }
 
 .footer--add-menu li:first-of-type {
@@ -601,21 +654,23 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 .footer_social-info {
   background: #293449;
   min-height: 107px;
-  padding-top: 40px;  
+  padding-top: 38px;  
 }
 
 .footer_social-info .copyright {
   float: left;
-  width: 235px;  
+  width: 235px;
+  padding-left: 2px;
   
   font-size: 16px;
+  line-height: 1.1em;
 }
 
 .footer--social {
   float: left;
   width: 150px;
   margin-left: 155px;
-  margin-top: -5px;
+  margin-top: -3px;
 }
 
 .footer--social a {
@@ -648,11 +703,11 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 }
 
 .footer--promo .column-1 {
-  width: 170px;  
+  width: 184px;  
 }
 
 .footer--promo .column-2 {
-  width: 120px;
+  width: 110px;
 }
 
 .footer--promo a {
@@ -669,6 +724,114 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   text-decoration: none;
 }
 
+/*  всплывающие окна  */
+
+.modal-writeus {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 27%;
+  width: 620px;
+  margin-left: -310px;
+  
+    
+  color: #000;
+  font-size: 0;
+  line-height: 18px;
+  background: #fff;
+  border-top: 6px solid #ee3643;
+  box-shadow: 0 0 40px 0 #000;
+}
+
+.modal-writeus_close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 30px;
+  height: 30px;
+  
+  font-size: 0;
+  background: #fff url('../img/modal-close.png') 50% 50% no-repeat;
+  
+  cursor: pointer;
+}
+
+.modal-writeus_white {
+  padding: 0 80px;
+  padding-top: 45px;
+  background: #fff;
+}
+
+.modal-writeus--user-info {
+  display: inline-block;
+  vertical-align: top;
+  width: 220px;
+  margin-bottom: 22px;
+  
+  font-size: 18px;
+  text-align: left;
+}
+
+.modal-writeus--user-info:first-of-type {
+  margin-right: 20px;
+}
+
+.modal-writeus--user-info input {
+  width: 188px;
+  margin-top: 10px;
+  padding: 9px 15px;
+  
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px; 
+  border: 1px solid #d7dcde;
+  border-radius: 2px;
+}
+
+.modal-writeus--description {
+  font-size: 18px;
+}
+
+.modal-writeus--description textarea {
+  width: 428px;
+  min-height: 97px;
+  margin-top: 10px;
+  margin-bottom: 36px;
+  padding: 7px 15px;
+  
+  
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px; 
+  border: 1px solid #d7dcde;
+  border-radius: 2px;    
+}
+
+.modal-writeus--buttons {
+  width: auto;
+  padding: 35px 80px;
+  
+  font-family: Cuprum, Arial, sans-serif;
+  font-size: 14px;
+  background: #f1f1f1;  
+}
+
+.modal-writeus--buttons button[type="submit"] {
+  float: left;
+  width: 220px;
+  
+  font-family: Cuprum, Arial, sans-serif;
+  font-size: 14px;  
+}
+
+.modal-writeus--buttons button[type="reset"] {
+  float: right;
+  width: 220px;
+  
+  font-family: Cuprum, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  
+  background: #fff;
+}
 
 /* index.html */
 
@@ -682,23 +845,26 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 }
 
 .promo-container {
-  float: left;
-  vertical-align: top;
-  height: 123px;
-  width: 275px;  
+  float: left;  
+  position: relative;
+  height: 118px;
+  width: 277px;  
   margin-bottom: 20px; 
-  padding-left: 25px;
+  padding-left: 23px;
+  padding-top: 5px;
 }
 
 .promo--btn {
   display: block;
   height: 37px;
-  width: 135px;
-  margin-top: -7px;
+  width: 138px;
+  margin-top: -2px;
   border-radius: 5px;
   
+  font-family: Cuprum, Arial, sans-serif;
   color: #fff;
   font-size: 14px;
+  text-transform: uppercase;
   text-decoration: none;
   line-height: 37px;
   text-align: center;  
@@ -742,8 +908,8 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 
 .arrowy-controls .next {
   position: absolute;
-  top: 115px;
-  right: 20px;
+  top: 120px;
+  right: 25px;
   display: block;
   width: 25px;
   height: 25px;
@@ -762,8 +928,8 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 
 .arrowy-controls .prev {
   position: absolute;
-  top: 115px;
-  left: 20px;
+  top: 120px;
+  left: 30px;
   display: block;
   width: 25px;
   height: 25px;
@@ -783,11 +949,11 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 .big-promo label:after {
   position: absolute;
   display: inline-block;
-  right: 260px;
-  top: 125px;
+  right: 250px;
+  top: 121px;
   
-  width: 8px;
-  height: 8px;  
+  width: 7px;
+  height: 7px;  
   z-index: 20;
   
   content: '';
@@ -799,7 +965,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 
 .big-promo .next:after {
   right: 125px; 
-  top: 260px;
+  top: 254px;
 }
 
 #btn-1:checked ~ .arrowy-controls .prev:after,
@@ -826,8 +992,8 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 .big-promo .btn {
   position: absolute;
   top: 206px;
-  left: 24px;
-  width: 195px;
+  left: 25px;
+  width: 197px;
   text-align: center;
   
   background: #ee3643;
@@ -844,31 +1010,33 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 
 .promo1 {
   margin-right: 20px;
-  background: #f6b22d url('../img/promo-materials.png') 85% 50% no-repeat;
+  background: #f6b22d url('../img/promo-materials.png') 83% 53% no-repeat;
 }
 
 .promo2 {  
-  background: #4aafde url('../img/promo-instruments.png') 85% 50% no-repeat;
+  background: #4aafde url('../img/promo-instruments.png') 88% 53% no-repeat;
 }
 
 .promo3 {
   float: right;
   margin-left: 20px;
-  background: #cc79d1 url('../img/promo-equipment.png') 85% 50% no-repeat;
+  background: #cc79d1 url('../img/promo-equipment.png') 86% 50% no-repeat;
 }
 
 .promo4 {
   float: right;
-  background: #85d179 url('../img/promo-discounts.png') 85% 50% no-repeat;
+  background: #85d179 url('../img/promo-discounts.png') 81% 50% no-repeat;
 }
 
 .promo5 {
   float: right;
-  background: #f6b22d url('../img/promo-delivery.png') 85% 50% no-repeat;
+  background: #f6b22d url('../img/promo-delivery.png') 86% 53% no-repeat;
 }
 
 .promo .new-item {
-  float: right;    
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .promo h2 {
@@ -884,9 +1052,8 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 }
 
 .add-header {
-  width: auto;
-  height: 88px;
-  line-height: 88px;
+  width: auto;  
+  line-height: 85px;
   margin-bottom: 20px;
   
   background: #ee3643;
@@ -902,10 +1069,10 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 
 .add-header .btn {
   float: right;
-  width: 253px;
+  width: 255px;
   text-align: center;
-  margin-right: 20px;
-  margin-top: 24px;
+  margin-right: 23px;
+  margin-top: 26px;
 }
 
 .catalog-items {
@@ -919,7 +1086,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   vertical-align: top;
   width: 218px;
   min-height: 316px;
-  margin-right: 15px;
+  margin-right: 16px;
   margin-bottom: 20px;
     
   text-align: center;
@@ -931,14 +1098,19 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 }
 
 .item .image {
-  height: 165px;
-  line-height: 165px;
+  height: 157px;
+  padding-top: 21px;
+  padding-right: 20px;
+  
   width: auto;
   text-align: center;
+  overflow: hidden;
 }
 
-.item img {
-  vertical-align: middle;  
+.item:first-of-type .image {
+  height: 173px;
+  padding-top: 5px;
+  padding-right: 3px;
 }
 
 .item-name {
@@ -946,7 +1118,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   min-height: 38px;
   margin: 0 auto;  
   
-  font-family: PTSans, Arial, sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   color: #000;
   font-size: 18px;
   font-weight: 700;  
@@ -961,21 +1133,21 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   margin: 0 auto;
   padding: 10px 0;
   
-  font-family: PTSans, Arial, sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   color: #999;
   font-size: 17px;
-  font-weight: 700;
+  font-weight: bold;
   text-decoration: line-through;  
 }
 
 .item .no-discount {
-  text-indent: -9999px;  
+  font-size: 0;  
 }
 
 .item .new-item {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -1px;
+  right: -1px;
   z-index: 20;  
 }
 
@@ -1062,11 +1234,13 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 
 .item-price {
   position: relative;
-  margin: 0 auto;
-  width: 102px;
-  padding: 10px 30px;
+  margin-top: -4px;
+  margin-left: 41px;
+  width: 80px;
+  padding: 0 30px;
   
-  font-family: PTSans, Arial, sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
+  line-height: 40px;
   color: #fff;
   font-weight: 700;
   
@@ -1093,11 +1267,11 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 
 .manufacturers a {
   display: inline-block;
-  height: 142px;
-  line-height: 142px;
+  vertical-align: top;
+  line-height: 143px;
   width: 218px;
   
-  margin-right: 15px;
+  margin-right: 16px;
   margin-bottom: 20px;  
   
   text-align: center;
@@ -1130,9 +1304,9 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 }
 
 .add-info {
-  min-height: 500px;
+  min-height: 488px;
   margin-bottom: 78px;
-  padding-top: 23px;  
+  padding-top: 32px;  
   background: #f2f6f8;
 }
 
@@ -1140,25 +1314,27 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   width: 430px;
   min-height: 110px;
   margin-top: 0;
-  margin-bottom: 63px;
+  margin-bottom: 58px;
   text-align: left;
   color: #000;
 }
 
 .services h4 {
   font-size: 30px;
+  font-weight: normal;
   text-transform: uppercase;
   text-align: left;  
-  margin-bottom: 26px;
+  margin-bottom: 30px;
 }
 
 .services p {
-  font-family: PTSans, Arial, sans-serif; 
+  width: 400px;
+  font-family: 'PT Sans', Arial, sans-serif; 
   font-size: 13px;
   line-height: 1.85em;  
 }
 
-.tabs {
+.tabs {  
   width: auto;
 }
 
@@ -1167,21 +1343,35 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 }
 
 .tab-switches {
+  position: relative;
   float: left;
   width: 240px;
+}
+
+.tab-switches:after {
+  position: absolute;
+  content: '';
+  right: 0;
+  top: -40px;
+  height: 272px;
+  width: 10px;
+  background: url('../img/tabs-shadow.png') no-repeat;
 }
 
 .tab-switches label {
   display: block;
   width: auto;
-  padding: 18px 0;
-  padding-left: 20px;
+  padding: 14px 0;
+  padding-left: 22px;
+  
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: bold;
   
   background: #32425c;
   border-top: 1px solid #405069;
   border-bottom: 1px solid #293449;
-  font-size: 21px;
-  
+    
   cursor: pointer;
 }
 
@@ -1194,7 +1384,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   width: 700px;  
 }
 
-.tab-info .component{
+.tab-info .component {
   display: none;
   width: auto;
   min-height: 287px;  
@@ -1205,15 +1395,15 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 .tab-info .header {  
   color: #32425c;
   text-transform: uppercase;
-  margin-top: -2px;
-  margin-bottom: 25px;
+  margin-top: 5px;
+  margin-bottom: 33px;
   font-size: 36px;
   font-weight: 400;
 }
 
 .tab-info p {
   width: 280px;
-  font-family: PTSans, Arial, sans-serif; 
+  font-family: 'PT Sans', Arial, sans-serif; 
   font-size: 13px;
   line-height: 1.85em;
   margin-bottom: 0;
@@ -1221,6 +1411,11 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 
 .tab-delivery {
   background: url('../img/tab-delivery.png') 100% 100% no-repeat;
+}
+
+.tab-delivery p:last-of-type {
+  width: 200px;
+  margin-top: 0;
 }
 
 .tab-guarantee {
@@ -1232,11 +1427,11 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 }
 
 .tab-credit {
-  background: url('../img/tab-credit.png') 100% 100% no-repeat;
+  background: url('../img/tab-credit.png') 110% 100% no-repeat;
 }
 
 .tab-credit p {
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 }
 
 .tab-credit .btn {
@@ -1257,15 +1452,14 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   display: block;
 }
 
-
-
-.contact-block {  
+.contact-block {
+  position: relative;
   color: #000;
 }
 
 .contact-block h4 {
   margin-top: -2px;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
   
   color: #000;
   font-size: 30px;
@@ -1276,40 +1470,42 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 .contact-block p {
   margin-top: 0;
   
-  font-family: PTSans, Arial, sans-serif; 
+  font-family: 'PT Sans', Arial, sans-serif; 
   font-size: 13px;
-  line-height: 1.85em;
+  line-height: 1.86em;
 }
 
 .company-description {
   float:left;
   width: 525px;
-  margin-bottom: 66px;
+  margin-bottom: 85px;
 }
 
 .company-description p {
-  margin-bottom: 24px;  
+  margin-bottom: 22px;  
 }
 
 .company-description ul {
-  margin-bottom: 38px;
+  margin-bottom: 37px;
 }
 
 .company-description li {
   position: relative;  
-  margin-bottom: 20px;
+  margin-bottom: 19px;
+  margin-left: -4px;
   font-size: 18px;
   list-style: none;  
 }
 
-.company-description .marker {
+.company-description li:before {
   position: absolute;
   display: block;
-  left: -8%;
-  top: 45%;
+  content: '';
+  left: -7%;
+  top: 50%;
   width: 25px;
-  height: 0;
-  border-top: 2px solid #fb565a;
+  height: 2px;
+  background: #fb565a;
 }
 
 .company-description .btn {
@@ -1328,26 +1524,28 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 }
 
 .map-address img {
-  margin-bottom: 38px;
+  margin-bottom: 35px;
 }
 
 .map-address .btn {
   width: 300px;  
 }
 
-
-
+.big-map {
+  display: none;
+}
 
 /*catalog.html*/
 
 .catalog-main {
-  font-family: PTSans, Arial, sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   color: #000;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
 .breadcrumbs {
-  padding: 21px 0;
+  padding: 18px 0;
   margin: 0;
 }
 
@@ -1356,20 +1554,22 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   display: inline-block;  
 }
 
-.breadcrumbs span,
-.breadcrumbs a {  
+.breadcrumbs a { 
+  padding-right: 5px;
+  
   color: #000;
   font-size: 13px;
   text-decoration: none;  
 }
 
-.breadcrumbs .marker {
+.breadcrumbs li:not(:first-of-type) a:before {
   display: inline-block;
-  vertical-align: top;
-  height: 6px;
-  width: 6px;
-  margin: 0 10px;
-  margin-top: 6px;
+  vertical-align: middle;
+  height: 8px;
+  width: 8px;
+  margin: 0;
+  margin-right: 15px;
+  content: '';
   
   border-top: 1px solid #cdd1d8;
   border-right: 1px solid #cdd1d8;
@@ -1382,9 +1582,10 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 
 .page-name {
   margin: 0;
-  padding: 32px 28px;
+  padding: 34px 29px;
   margin-bottom: 20px;
   
+  font-family: Cuprum, Arial, sans-serif;
   color: #32425c;
   font-size: 30px;
   font-weight: 400;  
@@ -1402,9 +1603,9 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 .common-headers {
   display: block;
   width: auto;
-  margin-bottom: 17px;
-  padding-left: 16px;
-  line-height: 37px;
+  margin-bottom: 15px;
+  padding-left: 19px;
+  line-height: 40px;
   
   font-size: 13px;  
   text-align: left;
@@ -1416,7 +1617,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   margin: 0;
   margin-bottom: 12px;
   
-  font-family: PTSans, Arial, sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   color: #000;
   font-size: 17px;
   font-weight: 700;
@@ -1551,14 +1752,21 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 
 .sorting-panel ul {
   float: right;
-  margin: 0;  
+  margin: 0;
+  margin-right: 5px;
+  margin-bottom: 14px;
+  
   text-align: right;
 }
 
 .sorting-panel li {
   display: inline-block;
   vertical-align: top;
-  padding: 0 20px; 
+  padding: 0 31px; 
+}
+
+.sorting-panel .icons {
+  padding: 0;  
 }
 
 .sorting-panel a {
@@ -1572,40 +1780,34 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   border-bottom: 1px solid #ee3643;
 }
 
-.sorting-panel .active {
+.sorting-panel a:active {
   color: #ee3643;
-  border-bottom: none;
+  border: none;
 }
 
-.sorting-panel .marker-up {
-  height: 0;
-  width: 0;
-  
-  border: 10px solid transparent;
-  border-width: 12px 6px;
-  border-bottom-color: #c6c2bd;
+.sorting-panel a[class^="icon-"] {
+  color: #c6c2bd;
+  font-size: 22px;
+  border: none;   
 }
 
-.sorting-panel .marker-up:hover {
-  border-bottom-color: #000;
+.sorting-panel a[class^="icon-"]:hover {
+  color: #010101;
 }
 
-.sorting-panel .marker-down {
-  margin-top: 12px;  
-  height: 0;
-  width: 0;
-  
-  border: 10px solid transparent;
-  border-width: 12px 6px;
-  border-top-color: #c6c2bd;  
+.sorting-panel a[class^="icon-"]:active {
+  color: #ee3643;
 }
 
-.sorting-panel .marker-down:hover {
-  border-top-color: #000;
+.sorting-panel li .current,
+.sorting-panel li .current:hover,
+.sorting-panel li .current:active {
+  color: #ee3643;
+  border: none;
 }
 
 .catalog-column .catalog-items {
-  width: 725px;
+  max-width: 725px;
   margin: 0;
   padding: 0;
   margin-bottom: 32px;
@@ -1615,28 +1817,38 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   margin-right: 0;
 }
 
+.catalog-column .item-name {
+  text-transform: capitalize;  
+}
+
 .pagination {
   margin: 0;
   padding: 0;
   margin-bottom: 60px;
 }
 
-.pagination span,
 .pagination a {
   display: inline-block;
   vertical-align: top;
-  padding: 0 15px;
+  margin-right: 5px;
+  padding: 8px 15px;
   
-  line-height: 36px;
   color: #000;
   font-size: 13px;
-  text-decoration: none;  
+  text-decoration: none;
+  text-align: center;
   
   border: 1px solid #e5e5e5;
   border-radius: 2px;  
 }
 
-.pagination span {
+.pagination .next {
+  width: 107px;
+}
+
+.pagination .current,
+.pagination .current:hover,
+.pagination .current:active {
   color: #fff;
   background: #ee3643;
   border-color: #ee3643;  
@@ -1652,8 +1864,8 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 
 .catalog-info { 
   margin: 0;
-  padding-top: 64px;
-  padding-bottom: 68px;
+  padding-top: 69px;
+  padding-bottom: 70px;
   
   color: #000;
   background: #f2f6f8;
@@ -1661,7 +1873,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 
 .catalog-info h4 {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   
   font-size: 30px;
   font-weight: 400;
@@ -1671,7 +1883,8 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 
 .catalog-info p {
   margin: 0;  
-  font-family: PTSans, Arial, sans-serif; 
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-weight: 100;
   font-size: 13px;
   line-height: 1.85em;  
 }
