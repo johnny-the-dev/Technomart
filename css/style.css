@@ -153,7 +153,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 .new-item {  
   height: 60px;
   width: 60px;
-  text-indent: -999px;
+  text-indent: -9999px;
   overflow: hidden;
   background: url('../img/new-item.png') no-repeat 0 0;
 }
@@ -489,6 +489,10 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   background: #ee3643;
 }
 
+.header_user-panel .active i {
+  color: #f3737c;
+}
+
 .header_user-block .user-profile {
   background: #fff;
   width: 300px;    
@@ -565,8 +569,12 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 }
 
 .user-refs span {
-  color: #32425c;
-  margin: 0 8px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 8px;  
+  
+  font-size: 10px;  
+  color: #32425c;    
 }
 
 
@@ -743,7 +751,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   box-shadow: 0 0 40px 0 #000;
 }
 
-.modal-writeus_close {
+.modal-writeus .close {
   position: absolute;
   right: 5px;
   top: 5px;
@@ -752,8 +760,16 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   
   font-size: 0;
   background: #fff url('../img/modal-close.png') 50% 50% no-repeat;
-  
+    
   cursor: pointer;
+}
+
+.modal-writeus .close:hover {
+  background-size: 80%;         
+}
+
+.modal-writeus .close:active {
+  background-size: 70%;         
 }
 
 .modal-writeus_white {
@@ -762,7 +778,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   background: #fff;
 }
 
-.modal-writeus--user-info {
+.modal-writeus .user-info {
   display: inline-block;
   vertical-align: top;
   width: 220px;
@@ -772,11 +788,11 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   text-align: left;
 }
 
-.modal-writeus--user-info:first-of-type {
+.modal-writeus .user-info:first-of-type {
   margin-right: 20px;
 }
 
-.modal-writeus--user-info input {
+.modal-writeus input {
   width: 188px;
   margin-top: 10px;
   padding: 9px 15px;
@@ -787,11 +803,11 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   border-radius: 2px;
 }
 
-.modal-writeus--description {
+.modal-writeus .description {
   font-size: 18px;
 }
 
-.modal-writeus--description textarea {
+.modal-writeus textarea {
   width: 428px;
   min-height: 97px;
   margin-top: 10px;
@@ -805,7 +821,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   border-radius: 2px;    
 }
 
-.modal-writeus--buttons {
+.modal-writeus .buttons {
   width: auto;
   padding: 35px 80px;
   
@@ -814,7 +830,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   background: #f1f1f1;  
 }
 
-.modal-writeus--buttons button[type="submit"] {
+.modal-writeus button[type="submit"] {
   float: left;
   width: 220px;
   
@@ -822,7 +838,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   font-size: 14px;  
 }
 
-.modal-writeus--buttons button[type="reset"] {
+.modal-writeus button[type="reset"] {
   float: right;
   width: 220px;
   
@@ -832,6 +848,101 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   
   background: #fff;
 }
+
+
+.modal-basket {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 620px;
+  margin-left: -310px;
+  margin-top: -150px;
+  
+  z-index: 30;
+  
+  border-top: 5px solid #ee3643;  
+}
+
+.modal-basket .close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 30px;
+  height: 30px;
+  
+  font-size: 0;
+  background: #fff url('../img/modal-close.png') 50% 50% no-repeat;
+    
+  cursor: pointer;
+}
+
+.modal-basket .close:hover {
+  background-size: 80%;         
+}
+
+.modal-basket .close:active {
+  background-size: 65%;         
+}
+
+.modal-basket .info {
+  padding: 65px 0;
+  
+  font-size: 30px;
+  line-height: 40px;
+  color: #000;
+  text-align: center;
+  
+  background: #fff;
+}
+
+.modal-basket .info:before {
+  display: inline-block;
+  vertical-align: middle;
+  content: '';
+  width: 66px;
+  height: 66px;
+  margin-right: 25px;
+  
+  border-radius: 50%;
+  background: #63a63e url('../img/basket-modal.png') 50% 50% no-repeat;
+  
+  cursor: pointer;
+}
+
+
+.modal-basket .buttons {
+  width: auto;
+  padding: 35px 80px;
+  
+  font-family: Cuprum, Arial, sans-serif;
+  font-size: 14px;
+  background: #f1f1f1;  
+}
+
+.modal-basket a {
+  float: left;
+  width: 220px;
+  
+  font-family: Cuprum, Arial, sans-serif;
+  font-size: 14px;  
+}
+
+.modal-basket .btn_white {
+  float: right;
+  width: 220px;
+  
+  font-family: Cuprum, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  
+  background: #fff;
+}
+
+.modal-basket .btn_white:active {
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+}
+
 
 /* index.html */
 
@@ -1069,8 +1180,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 
 .add-header .btn {
   float: right;
-  width: 255px;
-  text-align: center;
+  width: 255px;  
   margin-right: 23px;
   margin-top: 26px;
 }
@@ -1098,25 +1208,18 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 }
 
 .item .image {
-  height: 157px;
-  padding-top: 21px;
-  padding-right: 20px;
-  
-  width: auto;
+  width: 218px;
+  height: 168px;
+    
   text-align: center;
   overflow: hidden;
-}
-
-.item:first-of-type .image {
-  height: 173px;
-  padding-top: 5px;
-  padding-right: 3px;
 }
 
 .item-name {
   width: 180px;
   min-height: 38px;
-  margin: 0 auto;  
+  margin: 0 auto;
+  margin-top: 9px; 
   
   font-family: 'PT Sans', Arial, sans-serif;
   color: #000;
@@ -1554,6 +1657,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   display: inline-block;  
 }
 
+.breadcrumbs .current,
 .breadcrumbs a { 
   padding-right: 5px;
   
@@ -1562,7 +1666,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   text-decoration: none;  
 }
 
-.breadcrumbs li:not(:first-of-type) a:before {
+.breadcrumbs li:not(:first-of-type):before {
   display: inline-block;
   vertical-align: middle;
   height: 8px;
@@ -1683,7 +1787,8 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 }
 
 .manufacturer-range input[type="checkbox"]:checked + label:before {
-  content: '\2611';  
+  content: '\2611';
+  margin-right: 5.72px;
 }
 
 .manufacturer-range input[type="checkbox"] + label:hover:before,
@@ -1716,7 +1821,6 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   background: #c1c1c1;
   border: 3px solid #c1c1c1;
   border-radius: 50%;
-  margin-right: 16px;
   box-shadow: inset 0 0 0 5px #fff;
   -webkit-box-shadow: inset 0 0 0 5px #fff;
   -moz-box-shadow: inset 0 0 0 5px #fff;    
@@ -1740,9 +1844,19 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   
   background: #fff;
   border: 1px solid #e5e5e5;
-  border-radius: 3px;
+  border-radius: 3px;  
   
   cursor: pointer;
+}
+
+.search-column button:hover {
+  border-color: #bdc6ca;
+}
+
+.search-column button:active {
+  outline: none;
+  border-color: #ee3643; 
+  box-shadow: none;
 }
 
 .catalog-column {
