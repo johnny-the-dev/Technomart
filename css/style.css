@@ -86,7 +86,7 @@
 
 
 body {
-  min-width: 960px;
+  min-width: 1020px;
   margin: 0;
   padding: 0;
   
@@ -856,8 +856,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   top: 50%;
   left: 50%;
   width: 620px;
-  margin-left: -310px;
-  margin-top: -150px;
+  transform: translate(-50%, -50%);
   
   z-index: 30;
   
@@ -905,9 +904,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   margin-right: 25px;
   
   border-radius: 50%;
-  background: #63a63e url('../img/basket-modal.png') 50% 50% no-repeat;
-  
-  cursor: pointer;
+  background: #63a63e url('../img/basket-modal.png') 50% 50% no-repeat;  
 }
 
 
@@ -1346,6 +1343,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   line-height: 40px;
   color: #fff;
   font-weight: 700;
+  white-space: nowrap;
   
   background: #ee3643;
   border-radius: 3px;
