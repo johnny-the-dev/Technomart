@@ -222,13 +222,12 @@
         <div class="map-address">
           <h4>контакты</h4>
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-          <a href="#google-map"><img src="img/small-map.png" width="300" height="160" alt="карта"></a>
-          <a class="btn" href="#">заблудились? напишите нам</a>          
-          <div class="big-map">
-            <button class="map-close" type="submit"></button>            
+          <a class="open-map" href="#google-map"><img src="img/small-map.png" width="300" height="160" alt="карта"></a>
+          <div class="modal-map">
+            <div class="close">закрыть</div>            
             <iframe id="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123625!2d30.320894615640324!3d59.93879686904851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1445463719923" width="940" height="447" allowfullscreen><img src="#" alt="google.maps"></iframe>
-
           </div>
+          <a class="btn btn-writeus" href="#">заблудились? напишите нам</a>         
         </div>
         <div class="modal-writeus">
           <div class="close">закрыть</div>
@@ -300,6 +299,19 @@
           </div>
         </div>             
       </div>        
-    </footer>          
+    </footer>
+    <div class="modal-basket">
+      <div class="close">закрыть</div>     
+      <div class="info">
+        Товар добавлен в корзину&#33;             
+      </div>
+      <div class="buttons clearfix">
+         <a class="btn" href="#">оформить заказ</a>
+         <button class="btn btn_white">продолжить покупки</button>                   
+      </div>     
+    </div>
+    <script src="js/modal-writeus.js"></script>
+    <script src="js/modal-basket.js"></script>
+    <script src="js/modal-map.js"></script>          
   </body>
 </html>

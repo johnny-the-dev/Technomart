@@ -99,15 +99,6 @@ body {
   background: #fff;  
 }
 
-/* выделение границ 
-
-div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: green solid 1px}
-
-*/ 
-
-/* для "популяных производителей" и "популярных товаров" увеличил ширину на 30px больше центровщика и сделал text-align:left, вроде перестали выпадать, но можно ли так делать?=/ (при уменьшении экрана инлайн блоки теперь выходят немного за границу центровщика)
-*/
-
 /*  общие элементы  */
 
 .clearfix:after {
@@ -741,6 +732,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   top: 27%;
   width: 620px;
   margin-left: -310px;
+  z-index: 20;
   
     
   color: #000;
@@ -751,7 +743,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   box-shadow: 0 0 40px 0 #000;
 }
 
-.modal-writeus .close {
+[class^="modal"] .close {
   position: absolute;
   right: 5px;
   top: 5px;
@@ -759,16 +751,16 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   height: 30px;
   
   font-size: 0;
-  background: #fff url('../img/modal-close.png') 50% 50% no-repeat;
+  background: transparent url('../img/modal-close.png') 50% 50% no-repeat;
     
   cursor: pointer;
 }
 
-.modal-writeus .close:hover {
+[class^="modal"] .close:hover {
   background-size: 80%;         
 }
 
-.modal-writeus .close:active {
+[class^="modal"] .close:active {
   background-size: 70%;         
 }
 
@@ -849,6 +841,10 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   background: #fff;
 }
 
+.modal-writeus button[type="reset"]:active {
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+}
+
 
 .modal-basket {
   display: none;
@@ -860,28 +856,9 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   
   z-index: 30;
   
-  border-top: 5px solid #ee3643;  
-}
-
-.modal-basket .close {
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  width: 30px;
-  height: 30px;
+  background: #fff;
   
-  font-size: 0;
-  background: #fff url('../img/modal-close.png') 50% 50% no-repeat;
-    
-  cursor: pointer;
-}
-
-.modal-basket .close:hover {
-  background-size: 80%;         
-}
-
-.modal-basket .close:active {
-  background-size: 65%;         
+  border-top: 5px solid #ee3643;  
 }
 
 .modal-basket .info {
@@ -890,9 +867,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   font-size: 30px;
   line-height: 40px;
   color: #000;
-  text-align: center;
-  
-  background: #fff;
+  text-align: center;  
 }
 
 .modal-basket .info:before {
@@ -940,6 +915,40 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
 }
 
+.modal-map {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 20;
+}
+
+.modal-map .close {
+  right: -35px;
+}
+
+.modal-content-show {
+  display: block;
+  animation-name: open;
+  animation-duration: .4s;
+  animation-timing-function: linear;
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate3d(360%);
+  }
+}
 
 /* index.html */
 
@@ -1632,10 +1641,6 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   width: 300px;  
 }
 
-.big-map {
-  display: none;
-}
-
 /*catalog.html*/
 
 .catalog-main {
@@ -1717,7 +1722,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 
 .search-column h2 {
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 17px;
   
   font-family: 'PT Sans', Arial, sans-serif;
   color: #000;
@@ -1730,21 +1735,76 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   display: none;
 }
 
-.search-column .manufacturer-range label,
-.search-column .supply label {
+.manufacturer-range label,
+.supply label {
   display: block;
   width: auto;
-  margin: 2px 0;  
+  margin: 5px 0;  
   padding: 5px 0;
+  
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 20px;
   
   cursor: pointer;
 }
 
-.price-range {
-  margin-bottom: 24px;
+.range-controls {
+  position: relative;
+  width: auto;
+  height: 41px;
+  margin-bottom: 9px;
+  padding: 0 20px;
+  padding-top: 39px;
+  
+  
+  background: #f7f3ec;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
-.price-range input {
+.range-controls  .scale {
+  height: 2px;
+  
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  height: 2px;
+  width: 140px;
+  
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+    
+  border-radius: 50%;
+  border: 8px solid #fff;
+  
+  box-shadow: 0 2px 0 0 #d4d1cb;
+  
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 20px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.range-price {
+  margin-bottom: 25px;
+}
+
+.range-price input {
   border: none;
   outline: none;
   width: 95px;
@@ -1756,7 +1816,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   border-radius: 5px;
 }
 
-.price-range span {
+.range-price span {
   display: inline-block;
   text-align: center;
   width: 20px;
@@ -1795,11 +1855,11 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 }
 
 .search-column .supply {
-  margin-bottom: 79px;
+  margin-bottom: 75px;
 }
 
-.supply label {
-  margin-bottom: 7px;
+.supply label {  
+  font-size: 14px;
 }
 
 .supply input[type="radio"] + label:before {
@@ -1832,11 +1892,11 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   background: #b5b5b5;  
 }
 
-
 .search-column button {
-  width: 138px;
-  height: 36px;
+  width: 140px;
+  height: 38px;
   
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   text-transform: uppercase;
   

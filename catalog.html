@@ -76,16 +76,22 @@
       <h1 class="page-name">перфораторы</h1> 
       <div class="search-column">
         <span class="common-headers">фильтр:</span>
-        <form action="#" method="post">
-          <div class="price-range">
-            <h2>цена</h2>
-            <div class="range-toddler"></div>
-            <div class="form">
-              <input type="number" name="min-price" id="min-price" min="0" max="30000" step="1" value="0">
-              <span>&#45;</span>
-              <input type="number" name="max-price" id="max-price" min="0" max="30000" step="1" value="30000">
-            </div>                
-          </div>
+        <form action="#" method="post">          
+          <h2>цена</h2>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>          
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+              </div>
+              <div class="range-price">
+                <input type="number" name="min-price" id="min-price" min="0" max="30000" step="1" value="0">
+                <span>&#45;</span>
+                <input type="number" name="max-price" id="max-price" min="0" max="30000" step="1" value="30000">
+              </div>                
+          </div>          
           <div class="manufacturer-range">
             <h2>производители</h2>
             <input type="checkbox" id="manufacturer1" name="manufacturer" value="bosch"><label for="manufacturer1">bosch</label>
@@ -284,5 +290,6 @@
          <button class="btn btn_white">продолжить покупки</button>                   
       </div>     
     </div>
+    <script src="js/modal-basket.js"></script>
   </body>
 </html>
