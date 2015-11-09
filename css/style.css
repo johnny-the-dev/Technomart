@@ -928,7 +928,7 @@ body {
 
 .modal-content-show {
   display: block;
-  animation: open .4s linear, rotate .4s;  
+  animation: open .15s linear, rotate .15s;  
 }
 
 @keyframes open {
