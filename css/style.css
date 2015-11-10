@@ -1012,10 +1012,50 @@ body {
   width: 200%;
 }
 
-.slider-slides img {
+.slider-slides .slider {
   float: left;
   width: 620px;
   height: 266px;
+  padding: 0;
+  margin: 0;
+}
+
+.slider-slides .info {
+  width: auto;
+  min-height: 85px;
+  padding: 10px 25px;
+  
+  color: #fff;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.slider-slides h3 {
+  margin: 0;
+  margin-top: 13px;
+  margin-bottom: 8px;
+  
+  font-family: 'Cuprum', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.1em;
+  text-transform: uppercase;  
+}
+
+.slider-slides p {
+  margin: 0;
+  padding: 0;
+  
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;  
+}
+
+.slider-slides .slider-1 {
+  background: #fff url('../img/slider1.jpg') 50% 50% no-repeat;  
+}
+
+.slider-slides .slider-2 {
+  background: #fff url('../img/slider2.jpg') 50% 50% no-repeat;  
 }
 
 .big-promo input{
