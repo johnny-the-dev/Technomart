@@ -753,7 +753,7 @@ body {
   font-size: 0;
   background: transparent url('../img/modal-close.png') 50% 50% no-repeat;
     
-  cursor: pointer;
+  cursor: pointer;  
 }
 
 [class^="modal"] .close:hover {
@@ -919,7 +919,9 @@ body {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  z-index: 20;  
+  z-index: 20;
+  
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, .1)
 }
 
 .modal-map .close {
@@ -947,6 +949,107 @@ body {
   to {
     border-radius: 0;
   }
+}
+
+/* отдельные страницы для модальных окон */
+
+.modal-writeus-block {
+  display: block;
+  position: static;
+  margin: 10px auto;
+  width: 620px;
+  
+  color: #000;
+  font-size: 0;
+  line-height: 18px;
+  background: #fff;
+}
+
+.modal-writeus-block .user-info {
+  display: inline-block;
+  vertical-align: top;
+  width: 220px;
+  margin-bottom: 22px;
+  
+  font-size: 18px;
+  text-align: left;
+}
+
+.modal-writeus-block .user-info:first-of-type {
+  margin-right: 20px;
+}
+
+.modal-writeus-block input {
+  width: 188px;
+  margin-top: 10px;
+  padding: 9px 15px;
+  
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px; 
+  border: 1px solid #d7dcde;
+  border-radius: 2px;
+}
+
+.modal-writeus-block .description {
+  font-size: 18px;
+}
+
+.modal-writeus-block textarea {
+  width: 428px;
+  min-height: 97px;
+  margin-top: 10px;
+  margin-bottom: 36px;
+  padding: 7px 15px;
+  
+  
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px; 
+  border: 1px solid #d7dcde;
+  border-radius: 2px;    
+}
+
+.modal-writeus-block .buttons {
+  width: auto;
+  padding: 35px 80px;
+  
+  font-family: Cuprum, Arial, sans-serif;
+  font-size: 14px;    
+}
+
+.modal-writeus-block button[type="submit"] {
+  float: left;
+  width: 220px;
+  
+  font-family: Cuprum, Arial, sans-serif;
+  font-size: 14px;  
+}
+
+.modal-writeus-block button[type="reset"] {
+  float: right;
+  width: 220px;
+  
+  font-family: Cuprum, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  
+  background: #eee;
+}
+
+.modal-writeus-block button[type="reset"]:active {
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.page-map .big-map {
+  margin: 10px auto;
+  width: 940px;
+  height: 446px;
+}
+
+.page-map .google-ref {
+  display: block;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 10px 0;  
 }
 
 /* index.html */
@@ -1703,6 +1806,9 @@ body {
 .breadcrumbs a { 
   padding-right: 5px;
   
+  font-family: 'PT Sans', Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
   color: #000;
   font-size: 13px;
   text-decoration: none;  
