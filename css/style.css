@@ -51,8 +51,8 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
-.icon-left:before { content: '\3c'; } /* '&lt;' */
-.icon-right:before { content: '\3e'; } /* '&gt;' */
+.icon-left:before { content: '\3c'; } /* '<' */
+.icon-right:before { content: '\3e'; } /* '>' */
 .icon-basket:before { content: '\62'; } /* 'b' */
 .icon-facebook:before { content: '\66'; } /* 'f' */
 .icon-twitter:before { content: '\74'; } /* 't' */
@@ -175,23 +175,17 @@ body {
   text-decoration: none;
   
   background: #ee3643;
-  box-shadow: 0 5px 0 0 #b52933;
-  -webkit-box-shadow: 0 5px 0 0 #b52933;
-  -moz-box-shadow: 0 5px 0 0 #b52933;  
+  box-shadow: 0 5px 0 0 #b52933;  
 }
 
 .logo:hover {
   background: #ca2c37;
   box-shadow: 0 5px 0 0 #9a212a;
-  -webkit-box-shadow: 0 5px 0 0 #9a212a;
-  -moz-box-shadow: 0 5px 0 0 #9a212a;
 }
 
 .logo:active {
   background: #ba2732;
-  box-shadow: 0 5px 0 0 #8e1e26;
-  -webkit-box-shadow: 0 5px 0 0 #8e1e26;
-  -moz-box-shadow: 0 5px 0 0 #8e1e26;  
+  box-shadow: 0 5px 0 0 #8e1e26;  
 }
 
 .header_user-panel {
@@ -851,7 +845,8 @@ body {
   top: 50%;
   left: 50%;
   width: 620px;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   
   z-index: 30;
   
@@ -918,7 +913,8 @@ body {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
   z-index: 20;
   
   box-shadow: 0 0 20px 10px rgba(0, 0, 0, .1)
@@ -930,7 +926,17 @@ body {
 
 .modal-content-show {
   display: block;
-  animation: open .15s linear, rotate .15s;  
+  -webkit-animation: open .15s linear, rotate .15s;
+          animation: open .15s linear, rotate .15s;  
+}
+
+@-webkit-keyframes open {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes open {
@@ -939,6 +945,15 @@ body {
   }
   to {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes rotate {
+  from {
+    border-radius: 50%;
+  }  
+  to {
+    border-radius: 0;
   }
 }
 
@@ -1176,11 +1191,8 @@ body {
   
   border-top: 3px solid #fff;
   border-right: 3px solid #fff;
-  transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
   
   cursor: pointer;
 }
@@ -1196,11 +1208,8 @@ body {
   
   border-top: 3px solid #fff;
   border-right: 3px solid #fff;
-  transform: rotate(225deg);
   -webkit-transform: rotate(225deg);
-  -moz-transform: rotate(225deg);
-  -o-transform: rotate(225deg);
-  -ms-transform: rotate(225deg);
+          transform: rotate(225deg);
   
   cursor: pointer;
 }
@@ -1233,19 +1242,13 @@ body {
 }
 
 #btn-1:checked ~ .slider-inner .slider-slides {
-  transform: translate(0);
   -webkit-transform: translate(0);
-  -moz-transform: translate(0);
-  -o-transform: translate(0);
-  -ms-transform: translate(0);
+          transform: translate(0);
 }
 
 #btn-2:checked ~ .slider-inner .slider-slides {
-  transform: translate(-620px);
   -webkit-transform: translate(-620px);
-  -moz-transform: translate(-620px);
-  -o-transform: translate(-620px);
-  -ms-transform: translate(-620px);
+          transform: translate(-620px);
 }
 
 .big-promo .btn {
@@ -1464,8 +1467,6 @@ body {
 .item:hover {
   border-color: transparent;
   box-shadow: 0 8px 25px 7px #ccc;
-  -moz-box-shadow: 0 8px 25px 7px #ccc;
-  -webkit-box-shadow: 0 8px 25px 7px #ccc;  
 }
 
 .item-actions .buy {
@@ -1538,17 +1539,13 @@ body {
 
 .manufacturers a:hover {
   border-color: transparent;
-  box-shadow: 0 10px 25px 8px #ddd;
-  -moz-box-shadow: 0 10px 25px 8px #ddd;
-  -webkit-box-shadow: 0 10px 25px 8px #ddd;  
+  box-shadow: 0 10px 25px 8px #ddd;  
 }
 
 .manufacturers a:active {
   opacity: 0.4;
   border-color: transparent;
-  box-shadow: 0 7px 20px 0 #000;
-  -moz-box-shadow: 0 7px 20px 0 #000;
-  -webkit-box-shadow: 0 7px 20px 0 #000;  
+  box-shadow: 0 7px 20px 0 #000; 
 }
 
 .manufacturers img {
@@ -1825,11 +1822,8 @@ body {
   
   border-top: 1px solid #cdd1d8;
   border-right: 1px solid #cdd1d8;
-  transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .page-name {
@@ -2024,9 +2018,7 @@ body {
   background: #c1c1c1;
   border: 3px solid #c1c1c1;
   border-radius: 50%;
-  box-shadow: inset 0 0 0 5px #fff;
-  -webkit-box-shadow: inset 0 0 0 5px #fff;
-  -moz-box-shadow: inset 0 0 0 5px #fff;    
+  box-shadow: inset 0 0 0 5px #fff;   
 }
 
 .supply input[type="radio"] + label:hover:before {
