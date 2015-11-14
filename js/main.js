@@ -1,6 +1,6 @@
 // корзина
 
-var basketItem = document.querySelectorAll(".item");                
+var basketItem = document.querySelectorAll(".item");
 var basketPopup = document.querySelector(".modal-basket");
 var basketClose = basketPopup.querySelector(".close");
 var basketCont = basketPopup.querySelector(".btn_white");
@@ -10,12 +10,9 @@ function openBasket(event) {
     basketPopup.classList.add("modal-content-show");    
 }
 
-for(var i = 0; i < basketItem.length; i++) {
-  var basketLink = basketItem[i].querySelector(".buy");
-  basketLink.addEventListener("click", openBasket);
+for (var i = 0; i < basketItem.length; i++) {  
+  basketItem[i].querySelector(".buy").addEventListener("click", openBasket);
 }
-
-// окно стало всплывать, но не уверен, что верно сделал
 
 basketClose.addEventListener("click", function (event) {
   event.preventDefault();
